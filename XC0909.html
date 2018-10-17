@@ -1,39 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        *{
+        * {
             margin: 0;
+            box-sizing: border-box;
         }
-        .pg_servposit_bg{
+
+        .pg_servposit_bg {
             height: 100vh;
+            width: 100vw;
             background-image: url("/XC0909-element/black.jpg");
-            background-repeat: no-repeat;
             background-size: cover;
             position: relative;
         }
-        #cup_pic{
+
+        #cup_pic {
             position: absolute;
-            top:0;
-            left:0;
+            top: 0;
+            left: 0;
         }
-        #tea_pic{
+
+        #tea_pic {
             position: absolute;
-            bottom:-100px;
+            bottom: -100px;
             right: 0;
         }
 
+        .container {
+            max-width: 1140px;
+            height: 100vh;
+            padding: 10vh;
+            margin: 0 auto;
+        }
+
+        #mapframe {
+            height: 90%;
+            max-width: 90%;
+            margin: auto;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        @media screen and (max-width:800px) {
+            #cup_pic {
+                height: 40vw;
+            }
+
+            #tea_pic {
+                height: 60vw;
+                bottom: -20px;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div id="pg_service_poistion" class="pg_servposit_bg">
         <img id="cup_pic" src="/XC0909-element/cup pic.png" alt="cup">
         <img id="tea_pic" src="/XC0909-element/tea pic.png" alt="tea">
-        <div id="see_view" class="container"></div>
+        <div id="see_view" class="container">
+            <div id="mapframe">
+                <img id="map" src="/XC0909-element/map.png" alt="map">
+            </div>
+        </div>
     </div>
+    <script>
+        var mapsize = document.querySelector("#map");
+        var mapframeset = document.querySelector("#mapframe");
+        var mapframe_H = mapframeset.offsetHeight;
+        var mapframe_W = mapframeset.offsetWidth;
+        if (mapframe_W / mapframe_H > 0.75) {
+            mapsize.style.width = (mapframe_H * 0.75) + 'px';
+        }
+        else {
+            mapsize.style.height = (mapframe_W * 1.33) + 'px';
+        }
+    </script>
 </body>
+
 </html>
