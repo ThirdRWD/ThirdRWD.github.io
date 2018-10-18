@@ -24,7 +24,7 @@ body{
     color:#bf761a;
 }
 .section_4 a:active{
-    color:#efea3a;
+    color:#0D3082;
 }
 
 .img_41{
@@ -57,7 +57,7 @@ body{
 .title_42{
     position: absolute;
     left: 75%;
-    top: 70%;
+    top: 65%;
     font-size: 1.000em;
     color: #756759;
     font-family:"Microsoft JhengHei";
@@ -66,7 +66,7 @@ body{
 .title_43{
     position: absolute;
     left: 75%;
-    top: 75%;
+    top: 72.5%;
     font-size: 1.000em;
     color: #756759;
     font-family:"Microsoft JhengHei";
