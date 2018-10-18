@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>pg_service_poistion</title>
     <style>
         * {
             margin: 0;
@@ -35,12 +35,19 @@
         .container {
             max-width: 1140px;
             height: 100vh;
-            padding: 10vh;
-            margin: 0 auto;
+            margin:auto;
+        }
+        
+        #title_map{
+            color:white;
+            font-size: 3em;
+            font-family:Microsoft JhengHei ;
+            text-align: center;
+            padding: 3vh;
         }
 
         #mapframe {
-            height: 90%;
+            height: 60%;
             max-width: 90%;
             margin: auto;
         }
@@ -48,10 +55,24 @@
         #map {
             width: 100%;
             height: 100%;
+            display: block;
+            margin:auto;
+        }
+        #north:hover{
+            background-color: rgba(255,255,255,0.2);
+        }
+        #south:hover{
+            background-color: rgba(255,255,255,0.2);
+        }
+        #east:hover{
+            background-color: rgba(255,255,255,0.2);
+        }
+        #mid:hover{
+            background-color: rgba(255,255,255,0.2);
         }
 
 
-        @media screen and (max-width:800px) {
+        @media screen and (max-width:1000px) {
             #cup_pic {
                 height: 40vw;
             }
@@ -69,12 +90,27 @@
         <img id="cup_pic" src="/XC0909-element/cup pic.png" alt="cup">
         <img id="tea_pic" src="/XC0909-element/tea pic.png" alt="tea">
         <div id="see_view" class="container">
-            <div id="mapframe">
-                <img id="map" src="/XC0909-element/map.png" alt="map">
+            <div id="title_map">門市據點</div>
+            <div id="mapframe"><!--map_control-->
+                <img id="map" src="/XC0909-element/map.png" width="559" height="753" orgWidth="559" orgHeight="753" usemap="#clickmap" alt="map" >
+                <map name="clickmap" id="click_map">
+                    <area shape="rect" coords="557,751,559,753" alt="Image Map" style="outline:none;" title="Image Map">
+                    <area id="north" alt="north" title="north" href="http://www.image-maps.com/" shape="poly" coords="554,59,436,133,424,175,403,207,362,221,328,218,301,214,273,207,257,201,267,184,274,167,293,152,310,138,313,130,324,101,335,87,343,73,356,61,377,47,407,39,425,36,430,22,433,14,447,8,464,3,485,21,504,35,533,48" target="_self" >
+                    <area id="east" alt="east" title="east" href="http://www.image-maps.com/" shape="poly" coords="551,62,435,136,419,196,408,237,392,298,378,355,367,411,360,459,351,521,344,585,346,644,357,671,366,635,375,606,387,587,409,556,425,535,444,511,460,487,465,442,474,390,479,340,491,290,499,256,517,222,534,179,541,147,524,119,530,93,543,77" style="outline:none;" target="_self" >
+                    <area id="mid" alt="mid" title="mid" href="http://www.image-maps.com/" shape="poly" coords="415,201,380,219,338,220,287,213,261,205,257,205,243,230,220,279,184,332,172,353,164,374,164,404,159,432,162,448,195,446,250,441,295,433,333,423,362,403,366,394" style="outline:none;" target="_self" />
+                    <area id="south" alt="south" title="south" href="http://www.image-maps.com/" shape="poly" coords="363,413,317,432,250,443,192,446,159,447,155,478,155,504,175,528,193,551,207,581,206,590,202,595,214,606,227,619,237,630,268,642,287,655,312,682,321,699,324,718,321,720,328,740,337,741,343,737,353,749,362,735,368,713,361,690,357,677,348,654,340,612,341,579,345,522" style="outline:none;" target="_self" >
+                </map>
             </div>
         </div>
     </div>
-    <script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">//jQuery</script>
+    <script src="/XC0909-element/jquery.rwdImageMaps.js">//RWD_Map_tool_js</script>
+    <script>//RWD_Map_tool_js
+            $(document).ready(function(e) {
+                $('img[usemap]').rwdImageMaps();
+            });
+        </script>
+    <script>//RWD_mappic_resize
         var mapsize = document.querySelector("#map");
         var mapframeset = document.querySelector("#mapframe");
         var mapframe_H = mapframeset.offsetHeight;

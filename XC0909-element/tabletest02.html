@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        #output{
+            background: rgba(0,0,0,0.4);
+            color: white;
+            font-family: Microsoft JhengHei;
+            overflow-y: scroll;
+            overflow-x: hidden; 
+        }
+        #output::-webkit-scrollbar-track{
+	        border-radius: 10px;
+    	    background-color: #F5F5F5;
+        }
+        #output::-webkit-scrollbar{
+	        width: 12px;
+	        background-color: #F5F5F5;
+        }
+        #output::-webkit-scrollbar-thumb{
+	        border-radius: 10px;
+	        background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="demo">
+        <h2>The XMLHttpRequest Object</h2>
+        <div style="width:500px;height: 400px" id="output"></div>
+    </div>
+
+    <script>
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("output").textContent = this.responseText;
+            }
+        };
+        xhttp.open("GET", "/XC0909-element/position.txt", true);
+        xhttp.send();
+    </script>
+</body>
+
+</html>
