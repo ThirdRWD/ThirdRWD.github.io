@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>50嵐</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            /*計算寬度時 包含padding*/
+        }
+
+        body {
+            margin: 0;
+        }
+
+        /*清除浮動*/
+        .clearfix {
+            clear: both;
+        }
+
+        /*浮動式自訂連結區塊 - CSS*/
+        .myBtn {
+
+            position: fixed;
+
+            /*固定在網頁上不隨卷軸移動，若要隨卷軸移動用absolute*/
+
+            top: 60px;
+            /*設置垂直位置*/
+
+            right: 20%;
+
+        }
+
+        .myBtn img {
+            width: 50px;
+        }
+
+        .myBtn.close {
+            display: none;
+        }
+
+        .myBtn_close {
+            position: fixed;
+            top: 0px;
+            right: 550px;
+            display: none;
+        }
+
+        .myBtn_close_absolute img {
+            width: 50px;
+        }
+
+        .myBtn_close.show {
+            display: block;
+        }
+
+        .home_page {
+            background-image: url('/image/bg.png');
+            width: 100%;
+        }
+
+        .box_relative {
+            position: relative;
+            width: 100%;
+        }
+
+        .box_relative img {
+            width: 90%;
+        }
+
+        .box_absolute {
+            position: absolute;
+            transform: translateX(-50%);
+            top: 5px;
+            left: 50%;
+        }
+
+        #navbar_relative {
+            position: relative;
+        }
+
+        .myBtn_close_absolute {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+
+        .box_absolute img {
+            width: 50%;
+        }
+
+        #logo {
+            width: 15%;
+        }
+
+        .navbar {
+            background-color: #0d3082;
+            width: 600px;
+            height: 980px;
+            position: fixed;
+            top: 0px;
+            right: -600px;
+        }
+
+        .navbar.active {
+            right: 0px;
+        }
+
+        .nav_word {
+            font-size: 2em;
+            font-family: "Microsoft JhengHei";
+            padding: 5px 5px 5px 5px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .nav_items {
+            padding: 80px 20px 50px 20px;
+        }
+
+        .fb {
+            text-align: center;
+        }
+
+        .doc_page {
+            background-image: url('/image/bg.png');
+        }
+
+        .black_tea {
+            padding-top: 62px;
+            padding-bottom: 62px;
+        }
+
+        .black_tea img {
+            width: 65%;
+        }
+
+        .milk_tea {
+            padding-top: 62px;
+            padding-bottom: 62px;
+            text-align: right;
+        }
+
+        .milk_tea img {
+            width: 65%;
+        }
+.join_us{
+    letter-spacing: 5%;
+}
+        /*手機版CSS 螢幕尺寸小於768px時，套用以下CSS*/
+        @media screen and (max-width:768px) {
+
+            .nav_word {
+                font-size: 80%;
+            }
+
+            .navbar {
+                max-width: 50%;
+            }
+
+
+.myBtn {
+
+position: fixed;
+
+/*固定在網頁上不隨卷軸移動，若要隨卷軸移動用absolute*/
+
+top: 0;
+/*設置垂直位置*/
+
+right: 0;
+
+}
+
+            .black_tea {
+                padding-top: 5%;
+                padding-bottom: 5%;
+            }
+
+            .milk_tea {
+                padding-top: 5%;
+                padding-bottom: 5%;
+                text-align: right;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="home_page">
+
+        <div class="box_relative">
+            <img src="/image/手繪店面.jpg" alt="shop">
+            <div id="logo" class="box_absolute">
+                <img src="/image/名片logo.png" alt="logo" width="50%">
+            </div>
+        </div>
+
+    </div>
+    <div id="navbar_1" class="navbar">
+        <div id="navbar_relative" class="nav_items">
+            <div id="myBtn_close_1" class="myBtn_close_absolute">
+                <img src="/image/nav-icon-close.png" alt="close">
+            </div>
+
+
+            <div class="home">
+                <p class="nav_word">首&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;頁</p>
+            </div>
+
+            <div class="push">
+                <p class="nav_word">當&nbsp;季&nbsp;推&nbsp;廣</p>
+            </div>
+            <div class="news">
+                <p class="nav_word">最&nbsp;新&nbsp;消&nbsp;息</p>
+            </div>
+            <div class="five">
+                <p class="nav_word">50&nbsp;嵐&nbsp;嚴&nbsp;選</p>
+            </div>
+            <div class="menu" >
+                <p class="nav_word">M&nbsp;&nbsp;e&nbsp;&nbsp;n&nbsp;&nbsp;u</p>
+            </div>
+            <div class="shop">
+                <p class="nav_word">門&nbsp;市&nbsp;據&nbsp;點</p>
+            </div>
+            <div class="about">
+                <p class="nav_word">關&nbsp;於&nbsp;50&nbsp;嵐</p>
+            </div>
+            <div class="join_us" >
+                <p class="nav_word" >J&nbsp;O&nbsp;I&nbsp;N &nbsp;U&nbsp;S</p>
+            </div>
+            <div class="fb">
+                <a href="https://www.facebook.com/50%E5%B5%90-%E4%B8%AD%E5%8D%80-760302430756464/"><img src="/image/fb.png"
+                        width="60px"></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="doc_page">
+        <div class="black_tea">
+            <img src="/image/形象圖燕麥.png" alt="black_tea">
+
+        </div>
+        <div class="milk_tea">
+            <img src="/image/形象圖烏龍奶.png" alt="milk_tea">
+
+
+        </div>
+    </div>
+
+    <!--浮動式自訂連結區塊 - HTML-->
+    <div id="myBtn_1" class="myBtn">
+
+        <img src="/image/nav-icon.png" alt="oper"></a>
+
+    </div>
+
+
+
+    <script>
+        var myBtn_1 = document.querySelector("#myBtn_1");
+        var myBtn_close_1 = document.querySelector("#myBtn_close_1");
+        var navbar_1 = document.querySelector("#navbar_1");
+        myBtn_1.onclick = function () {
+            navbar_1.classList.add("active");
+            myBtn_close_1.classList.add("show");
+            myBtn_1.classList.add("close");
+
+        }
+        myBtn_close_1.onclick = function () {
+            navbar_1.classList.remove("active");
+            myBtn_close_1.classList.remove("show");
+            myBtn_1.classList.remove("close");
+
+        }
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
