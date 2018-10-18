@@ -17,6 +17,16 @@ body{
     position: relative; 
 }
 
+.section_4 a:visited{
+    color:#756759;
+}
+.section_4 a:hover{
+    color:#bf761a;
+}
+.section_4 a:active{
+    color:#efea3a;
+}
+
 .img_41{
     padding: 10% 20%;
     position: relative; 
@@ -34,8 +44,6 @@ body{
     top: 42%;
 }
 
-
-
 .title_41{
     color: #756759;
     font-weight: bolder;
@@ -49,7 +57,7 @@ body{
 .title_42{
     position: absolute;
     left: 75%;
-    top: 75%;
+    top: 70%;
     font-size: 1.000em;
     color: #756759;
     font-family:"Microsoft JhengHei";
@@ -58,7 +66,7 @@ body{
 .title_43{
     position: absolute;
     left: 75%;
-    top: 82.5%;
+    top: 75%;
     font-size: 1.000em;
     color: #756759;
     font-family:"Microsoft JhengHei";
