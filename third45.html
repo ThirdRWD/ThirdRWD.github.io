@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -14,7 +15,7 @@
     <div id="section_4" class="bg_4">
         <div class="section_4">
             <div class="title_41">50嵐嚴選</div>
-            <div class="img_41">
+            <div class="img_41" data-aos="fade-right" data-aos-duration="2000">
                 <img src="/imgs/嚴選食材.png" alt="嚴選食材">
                 <div class="img_42">
                     <img src="/imgs/珍珠.gif" alt="珍珠">
@@ -31,13 +32,17 @@
         <div class="container">
             <div id="section_5" class="section_5">
                 <div class="title_5">Menu</div>
-                <div class="img_5">
+                <div class="img_5" data-aos="fade-up" data-aos-duration="1500">
                     <img src="/imgs/Menu.jpg" alt="">
                 </div>
             </div>
         </div>
     </div>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 
 </html>
