@@ -17,13 +17,24 @@ body{
     position: relative; 
 }
 
-.img_4{
+.img_41{
     padding: 10% 20%;
+    position: relative; 
 }
 
-.img_4 img{
+.img_41 img{
     width: 50%;
 }
+
+.img_42{
+    max-width: 20%;
+    height: auto;
+    position: absolute;
+    left: 31%;
+    top: 42%;
+}
+
+
 
 .title_41{
     color: #756759;
