@@ -16,14 +16,17 @@ body {
 /*浮動式自訂連結區塊 - CSS*/
 .myBtn {
     position: fixed;
+    
     /*固定在網頁上不隨卷軸移動，若要隨卷軸移動用absolute*/
-    top: 60px;
+    top: 5.5%;
     /*設置垂直位置*/
-    right: 20%;
+    right: 0;
 }
 
+
 .myBtn img {
-   width: 50px;
+   width: 40%;
+   
 }
 
 .myBtn.close {
@@ -33,22 +36,22 @@ body {
 .myBtn_close {
     position: fixed;
     top: 0px;
-    right: 550px;
+    right: 34.375em;
     display: none;
 }
 
 .myBtn_close_absolute img {
-    width: 50px;
+    width: 3.125em ;
 }
 
 .myBtn_close.show {
     display: block;
 }
 
-.home_page {
+/* .home_page {
     background-image: url('/image/bg.png');
     width: 100%;
-}
+} */
 
 .box_relative {
     position: relative;
@@ -70,6 +73,8 @@ body {
     position: relative;
 }
 
+
+
 .myBtn_close_absolute {
     position: absolute;
     top: 0;
@@ -80,9 +85,6 @@ body {
     width: 50%;
 }
 
-#logo {
-    width: 15%;
-}
 
 .navbar {
     background-color: #0d3082;
@@ -146,16 +148,16 @@ body {
     .nav_word {
         font-size: 80%;
     }
-
     .navbar {
         max-width: 50%;
     }
-    .myBtn {
+    .myBtn img{
         position: fixed;
         /*固定在網頁上不隨卷軸移動，若要隨卷軸移動用absolute*/
-        top: 0;
+        top: 1%;
         /*設置垂直位置*/
-        right: 0;
+        right: 1%;
+        width: 10%;
     }
 
     .black_tea {
