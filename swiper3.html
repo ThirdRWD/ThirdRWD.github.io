@@ -26,17 +26,13 @@
             /*最新消息往上推*/
             left: 50%;
             transform: translateX(-50%);
-
         }
-
 
         @media (max-width: 655px) {
             .title_3 {
                 top: 4%;
             }
         }
-
-
 
         .container_3 {
             max-width: 1140px;
@@ -49,7 +45,6 @@
             color: #000;
             margin: 0;
             padding: 0;
-
         }
 
         .bg_3 {
@@ -60,7 +55,6 @@
             padding: 20% 0;
             position: relative;
             /*子層title3*/
-
         }
 
         .date_3 {
@@ -77,7 +71,6 @@
             padding: 15px;
             box-shadow: 4px -2px 10px rgba(59, 34, 3, 1);
             float: left;
-
         }
 
         @media (max-width: 500px) {
@@ -91,13 +84,6 @@
                 font-size: 1.150em;
             }
         }
-        
-
-
-
-
-
-
 
         /*DM box*/
 
@@ -107,22 +93,15 @@
             padding-right: 1.5em;
         }
 
-
-
-        /* ==========================================================================
-   Swiper modifications
- ========================================================================== */
-
+        /*Swiper modifications */
         .swiper-container {
             width: 100%;
             margin-top: 1em;
-            /* minor cosmetic */
+
         }
 
         .swiper-wrapper {
-            /* now pagination is below slides */
             margin-bottom: 3em;
-            /* just enough width so slides handing off screen are partially visible */
             width: 100%;
             position: relative;
         }
@@ -134,14 +113,12 @@
         }
 
         .swiper-slide {
-            /* a single column layout */
             width: 100%;
         }
 
 
 
-        .swiper-pagination {
-            /* show on small viewports */
+        .swiper-pagination_3 {
             display: block;
             position: absolute;
             left: 50%;
@@ -149,82 +126,56 @@
         }
 
         .swiper-pagination-bullet {
-            margin-left: 10px;
+            margin-left: 15px;
         }
 
-
-
-        /* now move prev button more to the left */
-        .swiper-button-prev {
-            /* but first hide on small viewports */
+        .swiper-button-prev_3 {
             display: none;
             left: 0;
             top: 0;
             margin-top: 0;
-
-            /* subtract .swiper-wrapper bottom-margin to vertically center arrow */
             height: calc(100% - 3em);
         }
 
         @media (min-width:500px) {
-            .swiper-button-prev {
-                /* show on larger viewports */
+            .swiper-button-prev_3 {
                 display: block;
             }
         }
 
         .swiper-button-next {
-            /* hide on small viewports */
             display: none;
             right: 0;
             top: 0;
             margin-top: 0;
-
-            /* subtract .swiper-wrapper bottom-margin to vertically center arrow */
             height: calc(100% - 3em);
         }
 
         @media (max-width: 320px) {
             .swiper-button-next {
-                /* show on larger viewports */
                 display: block;
             }
         }
 
-        /* ==========================================================================
-   content in swiper
- ========================================================================== */
+        /* content in swiper */
 
         .product_3 {
-            /* odds are you will use flexbox */
-            /* display: flex; */
-
-            /* center it */
             margin-left: auto;
             margin-right: auto;
-
-            /* adjust the width to add or remove whitespace  */
-            /* width: 82%; */
         }
 
         .photograph_3 {
-            /* if parent is flex it will stretch this image */
-            /* align-self: center; */
-            /* display: block; */
             position: relative;
             height: auto;
             width: 100%;
         }
-
-
-
         @media (max-width: 300px) {
             .product__name_3.product__name_3 {
                 font-size: .92em;
             }
         }
-
-        .product__description_3 {  /*圖片下面的字*/
+        .product__description_3 {
+            /*圖片下面的字*/
             font-family: "Microsoft JhengHei";
             font-size: 1.500em;
             padding: 3%;
@@ -232,14 +183,10 @@
             align-items: flex-end;
             margin: 6px;
         }
-
-      
-        @media (max-width: 655px) {  
+        @media (max-width: 655px) {
             .product__description_3 {
                 font-size: 1.500em;
             }
-
-
             .clearfix {
                 clear: both;
                 /*清除浮動*/
@@ -254,39 +201,27 @@
         <div class="container_3">
             <div class="title_3">最新消息</div>
             <div class="lunchbox">
-
-                <!-- slider main container -->
-                <div id="swiper1" class="swiper-container">
-
-                    <!-- additional required wrapper -->
+                     <div id="swiper1" class="swiper-container">
                     <div class="swiper-wrapper">
-
-                        <!-- slides -->
                         <div class="swiper-slide">
                             <div class="product_3">
                                 <img class="photograph_3" src="/產品_推廣/燕麥紅茶奶02.jpg" alt="">
                                 <div class="date_3">2018<br>10/15</div>
                                 <div class="product__description_3">燕麥系列新上市</div>
-
                             </div>
                         </div>
-
                         <div class="swiper-slide">
                             <div class="product_3">
                                 <img class="photograph_3" src="/活動節慶/環保/花博袋著走.jpg" alt="">
                                 <div class="date_3">2018<br>10/15</div>
                                 <div class="product__description_3">限量版花博杯袋 <br></div>
-
-
                             </div>
                         </div>
-
                         <div class="swiper-slide">
                             <div class="product_3">
                                 <img class="photograph_3" src="/產品_推廣/旺來紅01.gif" alt="">
                                 <div class="date_3">2018<br>10/15</div>
                                 <div class="product__description_3">新品上市旺來紅</div>
-
                             </div>
                         </div>
 
@@ -295,76 +230,59 @@
                                 <img class="photograph_3" src="/產品_推廣/瑪琪朵系列01.jpg" alt="">
                                 <div class="date_3">2018<br>10/15</div>
                                 <div class="product__description_3">瑪琪朵系列</div>
-
                             </div>
                         </div>
-
                         <div class="swiper-slide">
                             <div class="product_3">
                                 <img class="photograph_3" src="/產品_推廣/葡萄柚系列.jpg" alt="">
                                 <div class="date_3">2018<br>10/15</div>
                                 <div class="product__description_3">季節限定新鮮上市</div>
-
                             </div>
                         </div>
-
                         <div class="swiper-slide">
                             <div class="product_3">
                                 <img class="photograph_3" src="/產品_推廣/芒果青.jpg" alt="">
 
                                 <div class="date_3">2018<br>10/15</div>
                                 <div class="product__description_3">芒果青新鮮上市</div>
-
                             </div>
                         </div>
-
                         <div class="swiper-slide">
                             <div class="product_3">
                                 <img class="photograph_3" src="/產品_推廣/蜂蜜系列.jpg" alt="">
                                 <div class="date_3">2018<br>10/15</div>
                                 <div class="product__description_3">蜂蜜系列甜蜜上市</div>
-
                             </div>
                         </div>
                         <div class="clearfix"></div>
                     </div>
-
-
                 </div>
                 <!-- pagination -->
-                <div class="swiper-pagination"></div>
+                <div class="swiper-pagination_3"></div>
             </div>
         </div>
     </div>
     </div>
 
-
-
-
     <!-- Swiper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <!-- Initialize Swiper -->
+    <!-- Swiper -->
     <script>
-
         var swiper = new Swiper('.swiper-container', {
             slidesPerView: 3,
-
             spaceBetween: 50,
             freeMode: true,
             freeModeMomentum: false,
             loop: true,/*重複輪播*/
-
             pagination: {
-                el: '.swiper-pagination',
+                el: '.swiper-pagination_3',
                 clickable: true,
             },
-
             scrollbar: {
                 el: '.swiper-scrollbar'
             },
-
             breakpoints: {
                 1024: {
                     slidesPerView: 3,
