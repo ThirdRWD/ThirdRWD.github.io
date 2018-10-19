@@ -1,7 +1,182 @@
-body{
+
+/*1+2 css start*/
+
+* {
+    box-sizing: border-box;
+    /*計算寬度時 包含padding*/
+}
+
+body {
     margin: 0;
 }
 
+/*清除浮動*/
+.clearfix {
+    clear: both;
+}
+
+/*浮動式自訂連結區塊 - CSS*/
+.myBtn {
+    position: fixed;
+    /*固定在網頁上不隨卷軸移動，若要隨卷軸移動用absolute*/
+    top: 60px;
+    /*設置垂直位置*/
+    right: 20%;
+}
+
+.myBtn img {
+    width: 50px;
+}
+
+.myBtn.close {
+    display: none;
+}
+
+.myBtn_close {
+    position: fixed;
+    top: 0px;
+    right: 550px;
+    display: none;
+}
+
+.myBtn_close_absolute img {
+    width: 50px;
+}
+
+.myBtn_close.show {
+    display: block;
+}
+
+.home_page {
+    background-image: url('/image/bg.png');
+    width: 100%;
+}
+
+.box_relative {
+    position: relative;
+    width: 100%;
+}
+
+.box_relative img {
+    width: 90%;
+}
+
+.box_absolute {
+    position: absolute;
+    transform: translateX(-50%);
+    top: 5px;
+    left: 50%;
+}
+
+#navbar_relative {
+    position: relative;
+}
+
+.myBtn_close_absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.box_absolute img {
+    width: 50%;
+}
+
+#logo {
+    width: 15%;
+}
+
+.navbar {
+    background-color: #0d3082;
+    width: 600px;
+    height: 980px;
+    position: fixed;
+    top: 0px;
+    right: -600px;
+}
+
+.navbar.active {
+    right: 0px;
+}
+
+.nav_word {
+    font-size: 2em;
+    font-family: "Microsoft JhengHei";
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.nav_items {
+    padding: 80px 20px 50px 20px;
+}
+
+.fb {
+    text-align: center;
+}
+
+.doc_page {
+    background-image: url('/image/bg.png');
+}
+
+.black_tea {
+    padding-top: 62px;
+    padding-bottom: 62px;
+}
+
+.black_tea img {
+    width: 65%;
+}
+
+.milk_tea {
+    padding-top: 62px;
+    padding-bottom: 62px;
+    text-align: right;
+}
+
+.milk_tea img {
+    width: 65%;
+}
+
+.join_us {
+    letter-spacing: 5%;
+}
+
+/*手機版CSS 螢幕尺寸小於768px時，套用以下CSS*/
+@media screen and (max-width:768px) {
+    .nav_word {
+        font-size: 80%;
+    }
+
+    .navbar {
+        max-width: 50%;
+    }
+    .myBtn {
+        position: fixed;
+        /*固定在網頁上不隨卷軸移動，若要隨卷軸移動用absolute*/
+        top: 0;
+        /*設置垂直位置*/
+        right: 0;
+    }
+
+    .black_tea {
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .milk_tea {
+        padding-top: 5%;
+        padding-bottom: 5%;
+        text-align: right;
+    }
+}
+/*1+2 css end*/
+
+/*3 css start*/
+/*3 css end*/
+
+/*4+5 css start*/
 .container{
     max-width: 1140px;   
     margin: 0 auto;
@@ -96,3 +271,219 @@ body{
 .img_5 img{
     width: 100%;
 }
+/*4+5 css end*/
+
+/*6 css start*/
+/*6 css end*/
+
+/*7+8 css start*/
+.section_78 {
+    background-image: url("/78imgs/咖啡2.jpg");
+    background-size: cover;
+    background-position: center;
+    border: 0px #ccc solid;
+    /* 7+8背景圖 */
+}
+
+/* 關於我們 */
+.section7 {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.section7_title {
+    color: #756759;
+    font-size: 2.250em;
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.swiper-container {
+    max-width: 90%;
+    display: flex;
+    justify-content: center;
+    /* 輪播效果 */
+}
+
+.fas fa-angle-right {
+    color: #999999;
+}
+
+.swiper-button-next {
+    background-image: none;
+}
+
+.swiper-button-prev {
+    background-image: none;
+}
+
+/* join us */
+.section8 {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-bottom: 42px;
+}
+
+.section8_title {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    font-size: 2.250em;
+}
+
+.section8_container {
+    max-width: 1000px;
+    display: block;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    /* 兩張圖 */
+}
+
+.section8_container-1 {
+    width: 50%;
+}
+
+.section8_container-2 {
+    width: 50%;
+}
+
+.section8_img1 {
+    width: 100%;
+}
+
+.section8_img2 {
+    width: 100%;
+}
+
+/* footer */
+.footer_icon_container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+    position: relative;
+    padding-top: 1%;
+    /* 人力銀行 */
+}
+
+.footer_icon_container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    background-color: #999999;
+    height: 1px;
+    width: calc(50% - 120px);
+    /* 前虛線 */
+}
+
+.footer_icon_container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: block;
+    background-color: #999999;
+    height: 1px;
+    width: calc(50% - 120px);
+    /* 後虛線 */
+}
+
+.footer_line {
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.footer {
+    background-image: url("/78imgs/草png-06.png");
+    background-size: cover;
+    background-position: center;
+    border: 0px #ccc solid;
+    max-width: 100%;
+    padding-bottom: 1%;
+}
+
+.footer_container {
+    max-width: 600px;
+    display: block;
+    margin: auto;
+}
+
+.footer_logo {
+    max-width: 20%;
+    max-height: 100%;
+}
+
+.footer_item {
+    max-width: 80%;
+    float: right;
+    font-size: 1.750em;
+    font-weight: bolder;
+    text-shadow: 3px 3px 3px rgb(13, 48, 130);
+    color: white;
+    padding-top: 3%;
+    font-family: "Microsoft JhengHei";
+}
+
+.fi1 {
+    padding-right: 1%;
+}
+
+.clearfix {
+    clear: both;
+}
+
+@media screen and (max-width:768px) {
+    /*螢幕尺寸小於1200px時，套用以下css*/
+    .footer_container {
+        max-width: 384px;
+        display: block;
+        margin: auto;
+    }
+    .footer_item {
+        width: 100%;
+        font-size: 1em;
+        padding-top: 5%;
+        padding-left: 6%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    /*螢幕尺寸小於1200px時，套用以下css*/
+    .footer_container {
+        max-width: 300px;
+        display: block;
+        margin: auto;
+    }
+    .footer_item {
+        width: 100%;
+        font-size: 0.75em;
+        padding-top: 5%;
+        padding-left: 6%;
+    }
+}
+
+@media screen and (max-width:320px) {
+    /*螢幕尺寸小於1200px時，套用以下css*/
+    .footer_container {
+        max-width: 150px;
+        display: block;
+        margin: auto;
+        padding-top: 6%;
+    }
+    .footer_logo {
+        padding-top: 6%;
+    }
+    .footer_item {
+        width: 100%;
+        font-size: 0.1px;
+        padding-top: 0%;
+        padding-left: 12%;
+    }
+}
+/*7+8 end*/

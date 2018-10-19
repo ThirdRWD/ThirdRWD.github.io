@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+}
+
+.container{
+    max-width: 1140px;   
+    margin: 0 auto;
+}
+
+.bg_4{
+    background-image: url("/imgs/材質4.jpg");
+    padding: 0.5% 0;
+    background-size: cover;
+}
+
+.section_4{
+    position: relative; 
+}
+
+.section_4 a:visited{
+    color:#756759;
+}
+.section_4 a:hover{
+    color:#bf761a;
+}
+.section_4 a:active{
+    color:#0D3082;
+}
+
+.img_41{
+    padding: 20% 20%;
+    position: relative; 
+}
+
+.img_41 img{
+    width: 50%;
+}
+
+.img_42{
+    max-width: 20%;
+    height: auto;
+    position: absolute;
+    left: 31%;
+    top: 42%;
+}
+
+.title_41{
+    color: #756759;
+    font-weight: bolder;
+    font-size: 1.500em;
+    letter-spacing: 0.625em;
+    padding: 0 20%;
+    font-family:"Microsoft JhengHei"; 
+    line-height: 125px;
+}
+
+.title_42{
+    position: absolute;
+    left: 75%;
+    top: 65%;
+    font-size: 1.000em;
+    color: #756759;
+    font-family:"Microsoft JhengHei";
+}
+
+.title_43{
+    position: absolute;
+    left: 75%;
+    top: 72.5%;
+    font-size: 1.000em;
+    color: #756759;
+    font-family:"Microsoft JhengHei";
+}
+
+.bg_5{
+    background-image: url("/imgs/材質5.jpg");
+    padding: 7% 0;
+    background-size: cover;
+}
+
+.section_5{
+    padding: 7% 0;
+}
+
+.title_5{
+    text-align: center;
+    font-size: 1.500em;
+    letter-spacing: 0.625em;
+    font-family:"Microsoft JhengHei";
+}
+
+.img_5{
+    padding: 10% 10% 0 10%;
+}
+
+.img_5 img{
+    width: 100%;
+}

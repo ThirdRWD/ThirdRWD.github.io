@@ -6,214 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>50嵐</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            /*計算寬度時 包含padding*/
-        }
 
-        body {
-            margin: 0;
-        }
-
-        /*清除浮動*/
-        .clearfix {
-            clear: both;
-        }
-
-        /*浮動式自訂連結區塊 - CSS*/
-        .myBtn {
-
-            position: fixed;
-
-            /*固定在網頁上不隨卷軸移動，若要隨卷軸移動用absolute*/
-
-            top: 60px;
-            /*設置垂直位置*/
-
-            right: 20%;
-
-        }
-
-        .myBtn img {
-            width: 50px;
-        }
-
-        .myBtn.close {
-            display: none;
-        }
-
-        .myBtn_close {
-            position: fixed;
-            top: 0px;
-            right: 550px;
-            display: none;
-        }
-
-        .myBtn_close_absolute img {
-            width: 50px;
-        }
-
-        .myBtn_close.show {
-            display: block;
-        }
-
-        .home_page {
-            background-image: url('/image/bg.png');
-            width: 100%;
-        }
-
-        .box_relative {
-            position: relative;
-            width: 100%;
-        }
-
-        .box_relative img {
-            width: 90%;
-        }
-
-        .box_absolute {
-            position: absolute;
-            transform: translateX(-50%);
-            top: 5px;
-            left: 50%;
-        }
-
-        #navbar_relative {
-            position: relative;
-        }
-
-        .myBtn_close_absolute {
-            position: absolute;
-            top: 0;
-            left: 0;
-
-        }
-
-        .box_absolute img {
-            width: 50%;
-        }
-
-        #logo {
-            width: 15%;
-        }
-
-        .navbar {
-            background-color: #0d3082;
-            width: 600px;
-            height: 980px;
-            position: fixed;
-            top: 0px;
-            right: -600px;
-        }
-
-        .navbar.active {
-            right: 0px;
-        }
-
-        .nav_word {
-            font-size: 2em;
-            font-family: "Microsoft JhengHei";
-            padding: 5px 5px 5px 5px;
-            text-align: center;
-            color: white;
-            font-weight: bold;
-        }
-
-        .nav_items {
-            padding: 80px 20px 50px 20px;
-        }
-
-        .fb {
-            text-align: center;
-        }
-
-        .doc_page {
-            background-image: url('/image/bg.png');
-        }
-
-        .black_tea {
-            padding-top: 62px;
-            padding-bottom: 62px;
-        }
-
-        .black_tea img {
-            width: 65%;
-        }
-
-        .milk_tea {
-            padding-top: 62px;
-            padding-bottom: 62px;
-            text-align: right;
-        }
-
-        .milk_tea img {
-            width: 65%;
-        }
-.join_us{
-    letter-spacing: 5%;
-}
-        /*手機版CSS 螢幕尺寸小於768px時，套用以下CSS*/
-        @media screen and (max-width:768px) {
-
-            .nav_word {
-                font-size: 80%;
-            }
-
-            .navbar {
-                max-width: 50%;
-            }
-
-
-.myBtn {
-
-position: fixed;
-
-/*固定在網頁上不隨卷軸移動，若要隨卷軸移動用absolute*/
-
-top: 0;
-/*設置垂直位置*/
-
-right: 0;
-
-}
-
-            .black_tea {
-                padding-top: 5%;
-                padding-bottom: 5%;
-            }
-
-            .milk_tea {
-                padding-top: 5%;
-                padding-bottom: 5%;
-                text-align: right;
-            }
-        }
-    </style>
+    <!--swiper css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css">
+    <!--bootstrap css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <!--fontawesome css-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+    <!--AOS css-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!--css-->
+    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
-    <div class="home_page">
 
+    <!--1+2 html start-->
+    <div class="home_page">
         <div class="box_relative">
             <img src="/image/手繪店面.jpg" alt="shop">
             <div id="logo" class="box_absolute">
                 <img src="/image/名片logo.png" alt="logo" width="50%">
             </div>
         </div>
-
     </div>
     <div id="navbar_1" class="navbar">
         <div id="navbar_relative" class="nav_items">
             <div id="myBtn_close_1" class="myBtn_close_absolute">
                 <img src="/image/nav-icon-close.png" alt="close">
             </div>
-
-
             <div class="home">
                 <p class="nav_word">首&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;頁</p>
             </div>
-
             <div class="push">
                 <p class="nav_word">當&nbsp;季&nbsp;推&nbsp;廣</p>
             </div>
@@ -223,7 +49,7 @@ right: 0;
             <div class="five">
                 <p class="nav_word">50&nbsp;嵐&nbsp;嚴&nbsp;選</p>
             </div>
-            <div class="menu" >
+            <div class="menu">
                 <p class="nav_word">M&nbsp;&nbsp;e&nbsp;&nbsp;n&nbsp;&nbsp;u</p>
             </div>
             <div class="shop">
@@ -232,8 +58,8 @@ right: 0;
             <div class="about">
                 <p class="nav_word">關&nbsp;於&nbsp;50&nbsp;嵐</p>
             </div>
-            <div class="join_us" >
-                <p class="nav_word" >J&nbsp;O&nbsp;I&nbsp;N &nbsp;U&nbsp;S</p>
+            <div class="join_us">
+                <p class="nav_word">J&nbsp;O&nbsp;I&nbsp;N &nbsp;U&nbsp;S</p>
             </div>
             <div class="fb">
                 <a href="https://www.facebook.com/50%E5%B5%90-%E4%B8%AD%E5%8D%80-760302430756464/"><img src="/image/fb.png"
@@ -241,29 +67,131 @@ right: 0;
             </div>
         </div>
     </div>
-
-
     <div class="doc_page">
         <div class="black_tea">
             <img src="/image/形象圖燕麥.png" alt="black_tea">
-
         </div>
         <div class="milk_tea">
             <img src="/image/形象圖烏龍奶.png" alt="milk_tea">
-
-
         </div>
     </div>
-
     <!--浮動式自訂連結區塊 - HTML-->
     <div id="myBtn_1" class="myBtn">
-
         <img src="/image/nav-icon.png" alt="oper"></a>
-
     </div>
+    <!--1+2 html end-->
+
+    <!--3 html start-->
+    <!--3 html end-->
+
+    <!--4+5 html start-->
+    <div id="section_4" class="bg_4">
+        <div class="section_4">
+            <div class="title_41">50嵐嚴選</div>
+            <div class="img_41" data-aos="fade-right" data-aos-duration="2000">
+                <img src="/imgs/嚴選食材.png" alt="嚴選食材">
+                <div class="img_42">
+                    <img src="/imgs/珍珠.gif" alt="珍珠">
+                </div>
+            </div>
+            <a href="#section_4" class="title_42">嚴選食材</a>
+            <a href="http://twap.sgs.com/sgssip/VIP_zone.aspx?cstno=VG1uS3VSQitJOXQ4N0VJZGtzZndXUT09#bg" target="_blank"
+                class="title_43">衛生檢驗</a>
+        </div>
+    </div>
+    <div class="bg_5">
+        <div class="container">
+            <div id="section_5" class="section_5">
+                <div class="title_5">Menu</div>
+                <div class="img_5" data-aos="fade-up" data-aos-duration="1500">
+                    <img src="/imgs/Menu.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--4+5 html end-->
+
+    <!--6 html start-->
+    <!--6 html end-->
+
+    <!--7+8 html start-->
+    <div class="section_78">
+        <!--關於50嵐-->
+        <div class="section7">
+            <div class="section7_title">關於50嵐</div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img class="d-block w-100" src="/78imgs/資產8.jpg" alt="First slide">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="d-block w-100" src="/78imgs/資產9.jpg" alt="Second slide">
+                    </div>
+                </div>
+                <!--Add Arrows-->
+                <div class="swiper-button-next"><i class="fas fa-angle-right fa-3x "></i></div>
+                <div class="swiper-button-prev"><i class="fas fa-angle-right fa-3x fa-rotate-180"></i></div>
+            </div>
+        </div>
+        <!--加入我們-->
+        <div class="section8">
+            <div class="section8_title">JOIN US</div>
+            <div class="section8_container">
+                <div class="section8_container-1">
+                    <img class="section8_img1" src="/78imgs/徵的就是你-01-01.png" alt="徵的就是你">
+                </div>
+                <div class="section8_container-2">
+                    <img class="section8_img2" src="/78imgs/形像圖.jpg" alt="形象圖">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+    <div class="footer">
+        <!--人力銀行icon-->
+        <div class="footer_icon_container">
+            <a href="https://www.104.com.tw/jobbank/custjob/index.php?r=cust&j=48704325405c3f6756583a1d1d1d1d5f2443a363189j56" target="_blank"
+                class="fi1"><img class="fi1" src="/78imgs/104png_工作區域 1-01.png"></a>
+            <a href="https://www.1111.com.tw/corp/50756536/"  target="_blank" class="fi1"><img src="/78imgs/1111png_工作區域 1 複本-03.png"></a>
+            <a href="https://www.518.com.tw/%E4%BA%94%E5%8D%81%E5%B5%90(50%E5%B5%90)%E7%B6%A0%E8%8C%B6%E5%B0%88%E8%B3%A3%E5%BA%97-company-2864639.html" target="_blank"> 
+                <img src="/78imgs/518png_工作區域 1 複本 2-02.png"></a>
+        </div>
+        <!--真的是footer-->
+        <div class="footer_container">
+            <img class="footer_logo" src="/78imgs/logo-01.png" alt="logo">
+            <div class="footer_item">
+                <div class="i1">台中市南屯區楓樹東街500巷18號</div>
+                <div class="i2">(04) 2479-3018</div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="fix"></div>
+    <!--7+8 html end-->
 
 
 
+
+
+
+    <!--jquery js-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <!--??? js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <!--bootstrap js-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!--swiper js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
+    <!--AOS js-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!--1+2 js start-->
     <script>
         var myBtn_1 = document.querySelector("#myBtn_1");
         var myBtn_close_1 = document.querySelector("#myBtn_close_1");
@@ -272,21 +200,34 @@ right: 0;
             navbar_1.classList.add("active");
             myBtn_close_1.classList.add("show");
             myBtn_1.classList.add("close");
-
         }
         myBtn_close_1.onclick = function () {
             navbar_1.classList.remove("active");
             myBtn_close_1.classList.remove("show");
             myBtn_1.classList.remove("close");
-
         }
-
-
-
-
-
     </script>
+    <!--1+2 js end-->
 
+    <!--3 js start-->
+    <!--3 js end-->
+
+    <!--4+5 js start-->
+    <!--4+5 js end-->
+
+    <!--6 js start-->
+    <!--6 js end-->
+
+    <!--7+8 js start-->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+    <!--7+8 js end-->
 
 </body>
 
