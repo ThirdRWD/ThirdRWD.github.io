@@ -1,6 +1,3 @@
-
-/*1+2 css start*/
-
 * {
     box-sizing: border-box;
     /*計算寬度時 包含padding*/
@@ -15,6 +12,7 @@ body {
     clear: both;
 }
 
+/*1+2 css start*/
 /*浮動式自訂連結區塊 - CSS*/
 .myBtn {
     position: fixed;
@@ -25,7 +23,7 @@ body {
 }
 
 .myBtn img {
-    width: 50px;
+   width: 50px;
 }
 
 .myBtn.close {
