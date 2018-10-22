@@ -1,10 +1,12 @@
 * {
     box-sizing: border-box;
+    overflow-x: unset;
     /*計算寬度時 包含padding*/
 }
 
 body {
     margin: 0;
+    overflow-x: unset;
 }
 
 /*清除浮動*/
@@ -18,9 +20,9 @@ body {
     position: fixed;
     
     /*固定在網頁上不隨卷軸移動，若要隨卷軸移動用absolute*/
-    top: 5.5%;
+    top: 6vh;
     /*設置垂直位置*/
-    right: 0;
+    right: 10vw;
 }
 
 
@@ -54,23 +56,28 @@ body {
 } */
 
 .box_relative {
-    position: relative;
-    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url("/imgs/飲料.png");
+    overflow-x: hidden;
 }
 
-.box_relative img {
-    width: 100%;
-}
 
 .box_absolute {
-    position: absolute;
-    transform: translateX(-50%);
-    top: 5px;
-    left: 50%;
+    display: block;
+    margin:0 auto;
+    padding:3vh 0;
 }
-
-#navbar_relative {
-    position: relative;
+#logo{
+    width:10vw;
+}
+#navicon{
+    color:white;
+    transform: scale(3,3);
+    background-color:#0d3082;
+    border-radius: 50%;
+    padding: 0.5vh;
 }
 
 
@@ -85,58 +92,43 @@ body {
     width: 50%;
 }
 
-
-.navbar {
-    background-color: #0d3082;
-    width: 600px;
-    height: 980px;
-    position: fixed;
-    top: 0px;
-    right: -600px;
-}
-
-.navbar.active {
-    right: 0px;
-}
-
-.nav_word {
-    font-size: 2em;
-    font-family: "Microsoft JhengHei";
-    padding: 5px 5px 5px 5px;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-}
-
-.nav_items {
-    padding: 80px 20px 50px 20px;
-}
-
 .fb {
     text-align: center;
 }
 
 .doc_page {
     background-image: url('/image/bg.png');
+    height: 100vh;
+    background-size: cover;
+    background-position: 50% 50%;
 }
 
 .black_tea {
-    padding-top: 62px;
-    padding-bottom: 62px;
+    height: 50vh;
+    width: 100vw;
+    padding: 5vh 0;
 }
 
-.black_tea img {
-    width: 65%;
+#blackteaimg{
+    height: 100%;
+    background-size: contain;
+    background-image: url("/imgs/當季推燕麥網頁.png");
+    background-repeat: no-repeat;
 }
 
 .milk_tea {
-    padding-top: 62px;
-    padding-bottom: 62px;
-    text-align: right;
+    height: 50vh;
+    width: 100vw;
+    padding: 5vh 0;
+    position: relative;
 }
 
-.milk_tea img {
-    width: 65%;
+#milkteaimg{
+    height: 100%;
+    background-position: right top;
+    background-size: contain;
+    background-image: url("/imgs/當季推烏龍網頁.png");
+    background-repeat: no-repeat;
 }
 
 .join_us {
@@ -145,30 +137,35 @@ body {
 
 /*手機版CSS 螢幕尺寸小於768px時，套用以下CSS*/
 @media screen and (max-width:768px) {
-    .nav_word {
-        font-size: 80%;
-    }
-    .navbar {
-        max-width: 50%;
-    }
     .myBtn img{
         position: fixed;
         /*固定在網頁上不隨卷軸移動，若要隨卷軸移動用absolute*/
-        top: 1%;
+        top: 0.5vh;
         /*設置垂直位置*/
-        right: 1%;
-        width: 10%;
+        right: 0.1vw;
     }
-
-    .black_tea {
-        padding-top: 5%;
-        padding-bottom: 5%;
+    #logo{
+        width:30vw;
     }
-
-    .milk_tea {
-        padding-top: 5%;
-        padding-bottom: 5%;
-        text-align: right;
+    #milkteaimg{
+        height: 100%;
+        background-position: right top;
+        background-size: contain;
+        background-image: url("/imgs/當季推烏龍手機.png");
+        background-repeat: no-repeat;
+    }
+    #blackteaimg{
+        height: 100%;
+        background-size: contain;
+        background-image: url("/imgs/當季推燕麥手機.png");
+        background-repeat: no-repeat;
+    }
+    #navicon{
+        color:white;
+        background-color:#0d3082;
+        transform: scale(1,1);
+        border-radius: 50%;
+        padding: 0.5vh;
     }
 }
 /*1+2 css end*/
@@ -355,9 +352,10 @@ body {
 /*3 css end*/
 
 /*4+5 css start*/
-.container{
+.container_5{
     max-width: 1140px;   
     margin: 0 auto;
+    padding: 15vh 0;
 }
 
 
@@ -422,13 +420,12 @@ body {
 }
 
 .bg_5{
+    height: 100vh;
     background-image: url("/imgs/材質5.jpg");
-    padding: 7% 0;
     background-size: cover;
 }
 
 .section_5{
-    padding: 7% 0;
 }
 
 .title_5{
@@ -441,18 +438,17 @@ body {
 }
 
 .img_5{
-    padding: 10% 10% 0 10%;
 }
 
 .img_5 img{
-    width: 100%;
+    width: 23%;
 }
 /*4+5 css end*/
 
 /*6 css start*/
 
 .pg_servposit_bg {
-    height: 90vh;
+    height: 100vh;
     width: 100vw;
     background-image: url("/XC0909-element/black.jpg");
     background-size: cover;
@@ -488,18 +484,9 @@ body {
 }
 
 #mapframe {
-    height: 60%;
-    max-width: 90%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    height: 100vh;
+    padding:5vh 3vw;
     transition: 0.8s;
-}
-
-#map {
-    width: 100%;
-    height: 100%;
 }
 
 #wordframe {
@@ -577,6 +564,18 @@ body {
     color: rgb(100, 0, 0);
 }
 
+
+@media screen and (max-height:1000px) {
+    #cup_pic {
+        height: 20vh;
+    }
+
+    #tea_pic {
+        height: 30vh;
+        bottom: -20px;
+    }
+}
+
 @media screen and (max-width:1000px) {
     #cup_pic {
         height: 40vw;
@@ -590,18 +589,12 @@ body {
     #wordframe {
         width: 70vw;
     }
-}
-
-@media screen and (max-height:1000px) {
-    #cup_pic {
-        height: 40vh;
-    }
-
-    #tea_pic {
-        height: 60vh;
-        bottom: -20px;
+    #map {
+        height:100%;
+        width: 100%;
     }
 }
+
 
 /*6 css end*/
 
