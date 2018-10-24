@@ -468,6 +468,141 @@ body {
 /*4+5 css end*/
 
 /*6 css start*/
+
+#page06 {
+    max-width: 100vw;
+}
+
+#p6bg {
+    height: 100vh;
+    background-image: url("/XC0909-element/black.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+}
+
+
+
+#cup_pic {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#tea_pic {
+    position: absolute;
+    bottom: -100px;
+    right: 0;
+}
+
+.container {
+    max-width: 1140px;
+    height: 100vh;
+    margin: auto;
+    position: relative;
+}
+
+#title_map {
+    color: white;
+    font-size: 3em;
+    font-family: Microsoft JhengHei;
+    text-align: center;
+    padding: 3vh;
+}
+
+#mapframe {
+    height: 60%;
+    max-width: 90%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.8s;
+}
+
+#map {
+    height:100%;
+    width: auto;
+}
+
+#wordframe {
+    max-height: 30vh;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3%;
+    position: absolute;
+    right: 10%;
+    top: 30%;
+    overflow: auto;
+    color: white;
+    font-size: 1em;
+    font-family: Microsoft JhengHei;
+    text-align: center;
+    padding: 3vh;
+    transition: 0.8s;
+}
+#frametitle{
+    position: relative;
+}
+
+#sidetitle{
+    font-family: Microsoft JhengHei;
+    text-align: center;
+    display: inline;
+    
+}
+#close{
+    font-size: 2.5em;
+    position: absolute;
+    right: 1vh;
+}
+
+#wordframe::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#wordframe::-webkit-scrollbar {
+    width: 5px;
+    background-color: rgba(224, 145, 145, 0.3);
+}
+
+#wordframe::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.nodisplay {
+    height: 0px;
+    width: 0px;
+    display: none;
+    transition: 0.8s;
+}
+
+
+#pinadd {
+    color: rgb(255, 50, 50);
+}
+
+#pinadd:visited,
+#pinadd:active {
+    color: rgb(100, 0, 0);
+}
+
+@media screen and (max-width:1000px) {
+    #cup_pic {
+        height: 40vw;
+    }
+
+    #tea_pic {
+        height: 60vw;
+        bottom: -20px;
+    }
+
+    #wordframe {
+        width: 70vw;
+    }
+}
 /*6 css end*/
 
 /*7+8 css start*/

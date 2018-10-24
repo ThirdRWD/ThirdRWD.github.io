@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>pg_service_poistion</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .pg_servposit_bg {
+            height: 90vh;
+            width: 100vw;
+            background-image: url("/XC0909-element/black.jpg");
+            background-size: cover;
+            position: relative;
+            overflow-x: unset;
+        }
+
+        #cup_pic {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #tea_pic {
+            position: absolute;
+            bottom: -100px;
+            right: 0;
+        }
+
+        .container {
+            max-width: 1140px;
+            height: 100vh;
+            margin: auto;
+            position: relative;
+        }
+
+        #title_map {
+            color: white;
+            font-size: 3em;
+            font-family: Microsoft JhengHei;
+            text-align: center;
+            padding: 3vh;
+        }
+
+        #mapframe {
+            height: 60%;
+            max-width: 90%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: 0.8s;
+        }
+
+        #map {
+            width: min-content;
+            height: min-content;
+        }
+
+        #wordframe {
+            max-height: 30vh;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 3%;
+            position: absolute;
+            right: 10%;
+            top: 30%;
+            overflow: auto;
+            color: white;
+            font-size: 1em;
+            font-family: Microsoft JhengHei;
+            text-align: center;
+            padding: 3vh;
+            transition: 0.8s;
+        }
+        #frametitle{
+            position: relative;
+        }
+        
+        #sidetitle{
+            font-family: Microsoft JhengHei;
+            text-align: center;
+            display: inline;
+            
+        }
+        #close{
+            font-size: 2.5em;
+            position: absolute;
+            right: 1vh;
+        }
+
+        #wordframe::-webkit-scrollbar-track {
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        #wordframe::-webkit-scrollbar {
+            width: 5px;
+            background-color: rgba(224, 145, 145, 0.3);
+        }
+
+        #wordframe::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .nodisplay {
+            height: 0px;
+            width: 0px;
+            display: none;
+            transition: 0.8s;
+        }
+
+
+        #pinadd {
+            color: rgb(255, 50, 50);
+        }
+
+        #pinadd:visited,
+        #pinadd:active {
+            color: rgb(100, 0, 0);
+        }
+
+        @media screen and (max-width:1000px) {
+            #cup_pic {
+                height: 40vw;
+            }
+
+            #tea_pic {
+                height: 60vw;
+                bottom: -20px;
+            }
+
+            #wordframe {
+                width: 70vw;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="pg_service_poistion" class="pg_servposit_bg">
+        <img id="cup_pic" src="/XC0909-element/cup pic.png" alt="cup">
+        <img id="tea_pic" src="/XC0909-element/tea pic.png" alt="tea">
+        <div id="see_view" class="container">
+            <!--<img id="spot" src="/XC0909-element/spot.png" alt="spot">-->
+            <div id="title_map">門市據點</div>
+            <div id="mapframe">
+                <!--map_control-->
+                <img id="map" src="/XC0909-element/map.png" width="559" height="753" orgWidth="559" orgHeight="753"
+                    usemap="#clickmap" alt="map" data-aos="fade-up">
+                <map name="clickmap" id="click_map">
+                    <area shape="rect" coords="557,751,559,753" alt="Image Map" style="outline:none;" title="Image Map">
+                    <area id="north" onmouseover="hoverside(this,'北')" onclick="setside('北')" alt="north" title="north"
+                        shape="poly" coords="554,59,436,133,424,175,403,207,362,221,328,218,301,214,273,207,257,201,267,184,274,167,293,152,310,138,313,130,324,101,335,87,343,73,356,61,377,47,407,39,425,36,430,22,433,14,447,8,464,3,485,21,504,35,533,48"
+                        target="_self">
+                    <area id="east" onmouseover="hoverside(this,'東')" onclick="setside('東')" alt="east" title="east"
+                        shape="poly" coords="551,62,435,136,419,196,408,237,392,298,378,355,367,411,360,459,351,521,344,585,346,644,357,671,366,635,375,606,387,587,409,556,425,535,444,511,460,487,465,442,474,390,479,340,491,290,499,256,517,222,534,179,541,147,524,119,530,93,543,77"
+                        style="outline:none;" target="_self">
+                    <area id="mid" onmouseover="hoverside(this,'中')" onclick="setside('中')" alt="mid" title="mid" shape="poly"
+                        coords="415,201,380,219,338,220,287,213,261,205,257,205,243,230,220,279,184,332,172,353,164,374,164,404,159,432,162,448,195,446,250,441,295,433,333,423,362,403,366,394"
+                        style="outline:none;" target="_self" />
+                    <area id="south" onmouseover="hoverside(this,'南')" onclick="setside('南')" alt="south" title="south"
+                        shape="poly" coords="363,413,317,432,250,443,192,446,159,447,155,478,155,504,175,528,193,551,207,581,206,590,202,595,214,606,227,619,237,630,268,642,287,655,312,682,321,699,324,718,321,720,328,740,337,741,343,737,353,749,362,735,368,713,361,690,357,677,348,654,340,612,341,579,345,522"
+                        style="outline:none;" target="_self">
+                </map>
+            </div>
+            <div id="wordframe" class="nodisplay">
+                <div id=frametitle>
+                    <h1 id="sidetitle"></h1>
+                    <i id="close" class="fas fa-angle-up"></i>
+                </div>
+                <div id="word"></div>
+            </div>
+        </div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">//jQuery</script>
+    <script src="/XC0909-element/jquery.rwdImageMaps.js">//RWD_Map_tool_js</script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">//aostool</script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">//bootstrap</script>
+    <script>
+        //aos initial
+        AOS.init();
+        //RWD_Map_tool_js
+        $(document).ready(function (e) {
+            $('img[usemap]').rwdImageMaps();
+        });
+
+        //RWD_mappic_resize
+        var mapsize = document.querySelector("#map");
+        var mapframeset = document.querySelector("#mapframe");
+        var mapframe_H = mapframeset.offsetHeight;
+        var mapframe_W = mapframeset.offsetWidth;/*
+        if (mapframe_W / mapframe_H > 0.75) {
+            mapsize.style.width = (100 * ((mapframe_H * 0.75) / mapframe_W)) + '%';
+        }
+        else {
+            mapsize.style.height = (100 * ((mapframe_W * 1.33) / mapframe_H)) + '%';
+        }*/
+
+        //hover
+        function hoverside(e, side) {
+        }
+
+        //position click
+        var last_s = 'non';
+        function setside(side) {
+            if (side != last_s) {
+                document.getElementById("wordframe").classList.remove("nodisplay");
+                document.getElementById("wordframe").classList.add("clickin");
+                var obj, dbParam, xmlhttp, myObj, x, txt = "";
+                obj = { table: "customers", limit: 20 };
+                dbParam = JSON.stringify(obj);
+                xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        myObj = JSON.parse(this.responseText);
+                        txt += "<table border='0'>"
+                        for (x in myObj) {
+                            if (myObj[x].position == side)
+                                txt += "<tr><td>" + myObj[x].name + "</td><td>" + myObj[x].address + "</td><td>" + myObj[x].phone + "</td><td><a href='" + myObj[x].link + "' target='_blank'><i id='pinadd' class='fas fa-map-marker-alt'></i></a></td></tr>";
+                        }
+                        txt += "</table>"
+                        document.getElementById("sidetitle").innerHTML = side+"部";
+                        document.getElementById("word").innerHTML = txt;
+                    }
+                };
+                xmlhttp.open("GET", "/XC0909-element/posiitioninjson.txt", true);
+                xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xmlhttp.send("x=" + dbParam);
+                if(window.innerWidth>1000) mapframeset.style.left = '30%';
+                last_s = side;
+            }
+            else {
+                document.getElementById("wordframe").classList.add("nodisplay");
+                mapframeset.style.left = '50%';
+                last_s = 'non';
+            }
+        }
+
+        //moblie clickout
+        document.querySelector('#wordframe').onclick = function moblieclick() {
+            document.getElementById("wordframe").classList.add("nodisplay");
+            mapframeset.style.left = '50%';
+            last_s = 'non';
+        }
+    </script>
+</body>
+
+</html>
