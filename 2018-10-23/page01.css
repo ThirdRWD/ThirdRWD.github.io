@@ -1,0 +1,35 @@
+#p1bg {
+    height: 100vh;
+    background-image: url("/2018-10-23/page01/page01_banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+#logo {
+    width: 5vw;
+    margin: 0 auto;
+    padding: 2vh 0 0 0;
+}
+
+#logo img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+/*web to ipad*/
+@media screen and (max-width:1020px) {
+    #logo {
+        width: 20vw;
+        margin: 0 auto;
+        padding: 2vh 0 0 0;
+    }
+}
+/*cellphone*/
+@media screen and (max-width:960px) {
+    #logo {
+        width: 15vw;
+        margin: 0 auto;
+        padding: 2vh 0 0 0;
+    }
+}

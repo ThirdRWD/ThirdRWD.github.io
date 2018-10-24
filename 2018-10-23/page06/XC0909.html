@@ -59,41 +59,47 @@
         }
 
         #map {
-            width: min-content;
-            height: min-content;
+            width: 100%;
+            height: 100%;
         }
 
-        #wordframe {
-            max-height: 30vh;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 3%;
-            position: absolute;
-            right: 10%;
-            top: 30%;
-            overflow: auto;
-            color: white;
-            font-size: 1em;
-            font-family: Microsoft JhengHei;
-            text-align: center;
-            padding: 3vh;
-            transition: 0.8s;
+       #wordframe {
+           max-height: 30vh;
+           background: rgba(255, 255, 255, 0.3);
+           border-radius: 3%;
+           border-radius: 5% 0% 0% 5%;
+           position: absolute;
+           right: 10%;
+           top: 30%;
+           overflow: auto;
+           transition: 0.8s;
+           padding: 1vh;
+       }
+        #wordf {
+           margin: 0.5vh;
+       }
+        #close {
+           position: absolute;
+           right: 1vh;
+           color: white;
+           transform: scale(2, 2);
+       }
+        #word {
+           padding: 2vh;
+       }
+       #titleside{
+           color: white;
+           font-family: Microsoft JhengHei;
+           text-align: center;
+       }
+       #sideconten{
+           color: white;
+           font-size: 1em;
+           font-family: Microsoft JhengHei;
+           text-align: center;
+           padding: 3vh;
+           transition: 0.8s;
         }
-        #frametitle{
-            position: relative;
-        }
-        
-        #sidetitle{
-            font-family: Microsoft JhengHei;
-            text-align: center;
-            display: inline;
-            
-        }
-        #close{
-            font-size: 2.5em;
-            position: absolute;
-            right: 1vh;
-        }
-
         #wordframe::-webkit-scrollbar-track {
             border-radius: 10px;
             background-color: rgba(255, 255, 255, 0.3);
@@ -106,12 +112,14 @@
 
         #wordframe::-webkit-scrollbar-thumb {
             border-radius: 10px;
-            background-color: rgba(255, 255, 255, 0.3);
-        }
-
+           background-color: rgba(255, 255, 255, 0.3);
+       }
+        #spot {
+           transform: scale(0.5, 0.5);
+       }
         .nodisplay {
-            height: 0px;
-            width: 0px;
+           height: 0px;
+           width: 0px;
             display: none;
             transition: 0.8s;
         }
@@ -138,12 +146,13 @@
 
             #wordframe {
                 width: 70vw;
-            }
-        }
-    </style>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
-        crossorigin="anonymous">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+           }
+       }
+   </style>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+       crossorigin="anonymous">
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -171,17 +180,19 @@
                     <area id="south" onmouseover="hoverside(this,'南')" onclick="setside('南')" alt="south" title="south"
                         shape="poly" coords="363,413,317,432,250,443,192,446,159,447,155,478,155,504,175,528,193,551,207,581,206,590,202,595,214,606,227,619,237,630,268,642,287,655,312,682,321,699,324,718,321,720,328,740,337,741,343,737,353,749,362,735,368,713,361,690,357,677,348,654,340,612,341,579,345,522"
                         style="outline:none;" target="_self">
-                </map>
-            </div>
-            <div id="wordframe" class="nodisplay">
-                <div id=frametitle>
-                    <h1 id="sidetitle"></h1>
-                    <i id="close" class="fas fa-angle-up"></i>
-                </div>
-                <div id="word"></div>
-            </div>
-        </div>
-    </div>
+               </map>
+           </div>
+           <div id="wordframe" class="nodisplay">
+               <div id="wordf">
+                   <i id="close" onclick="closing()" class="fas fa-angle-up"></i>
+               </div>
+               <div id="word">
+                   <h2 id="titleside"></h2>
+                   <div id="sideconten"></div>
+               </div>
+           </div>
+       </div>
+   </div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">//jQuery</script>
     <script src="/XC0909-element/jquery.rwdImageMaps.js">//RWD_Map_tool_js</script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">//aostool</script>
@@ -198,13 +209,13 @@
         var mapsize = document.querySelector("#map");
         var mapframeset = document.querySelector("#mapframe");
         var mapframe_H = mapframeset.offsetHeight;
-        var mapframe_W = mapframeset.offsetWidth;/*
+        var mapframe_W = mapframeset.offsetWidth;
         if (mapframe_W / mapframe_H > 0.75) {
             mapsize.style.width = (100 * ((mapframe_H * 0.75) / mapframe_W)) + '%';
         }
         else {
             mapsize.style.height = (100 * ((mapframe_W * 1.33) / mapframe_H)) + '%';
-        }*/
+        }
 
         //hover
         function hoverside(e, side) {
@@ -226,31 +237,33 @@
                         txt += "<table border='0'>"
                         for (x in myObj) {
                             if (myObj[x].position == side)
-                                txt += "<tr><td>" + myObj[x].name + "</td><td>" + myObj[x].address + "</td><td>" + myObj[x].phone + "</td><td><a href='" + myObj[x].link + "' target='_blank'><i id='pinadd' class='fas fa-map-marker-alt'></i></a></td></tr>";
-                        }
-                        txt += "</table>"
-                        document.getElementById("sidetitle").innerHTML = side+"部";
-                        document.getElementById("word").innerHTML = txt;
-                    }
-                };
-                xmlhttp.open("GET", "/XC0909-element/posiitioninjson.txt", true);
-                xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                xmlhttp.send("x=" + dbParam);
-                if(window.innerWidth>1000) mapframeset.style.left = '30%';
-                last_s = side;
-            }
-            else {
+                               txt += "<tr><td>" + myObj[x].name + "</td><td>" + myObj[x].address + "</td><td>" + myObj[x].phone + "</td><td><a href='" + myObj[x].link + "' target='_blank'><i id='pinadd' class='fas fa-map-marker-alt'></i></a></td></tr>";
+                       }
+                       txt += "</table>"
+                       document.getElementById("wordframe").innerHTML = txt;
+                       document.getElementById("titleside").innerHTML=side+"部";
+                       document.getElementById("sideconten").innerHTML = txt;
+                   }
+               };
+               xmlhttp.open("GET", "/XC0909-element/posiitioninjson.txt", true);
+               xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+               xmlhttp.send("x=" + dbParam);
+               mapframeset.style.left = '30%';
+               if (window.innerWidth > 1000) mapframeset.style.left = '30%';
+               last_s = side;
+           }
+           else {
                 document.getElementById("wordframe").classList.add("nodisplay");
                 mapframeset.style.left = '50%';
-                last_s = 'non';
-            }
-        }
-
+               last_s = 'non';
+           }
+       }
         //moblie clickout
-        document.querySelector('#wordframe').onclick = function moblieclick() {
-            document.getElementById("wordframe").classList.add("nodisplay");
-            mapframeset.style.left = '50%';
-            last_s = 'non';
+       document.querySelector('#wordframe').onclick = function moblieclick() {
+       function closing() {
+           document.getElementById("wordframe").classList.add("nodisplay");
+           mapframeset.style.left = '50%';
+           last_s = 'non';
         }
     </script>
 </body>

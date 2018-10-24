@@ -1,0 +1,73 @@
+#p2bg {
+    height: 100vh;
+    background-image: url("/2018-10-23/page02/page02_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 10vh 0;
+}
+
+#bannerframe {
+    height: 100%;
+    width: 100%;
+    /*background: rosybrown;*/
+    position: relative;
+    overflow-x: hidden;
+}
+
+#yanmai {
+    height: 40%;
+    width: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*background: red;*/
+}
+
+#wulong {
+    height: 40%;
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /*background: blue;*/
+}
+
+#yanmaipic {
+    height: 100%;
+    width: 100%;
+    background-image: url("/2018-10-23/page02/yanmaiweb.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+}
+
+#wulongpic {
+    height: 100%;
+    width: 100%;
+    background-image: url("/2018-10-23/page02/wulongweb.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+@media screen and (max-width:960px) {
+    #yanmaipic {
+        height: 100%;
+        width: 100%;
+        background-image: url("/2018-10-23/page02/yanmaimobile.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left;
+    }
+
+    #wulongpic {
+        height: 100%;
+        width: 100%;
+        background-image: url("/2018-10-23/page02/wulongmobile.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+
+}

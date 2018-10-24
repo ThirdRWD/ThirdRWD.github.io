@@ -1,0 +1,117 @@
+ /*nav*/
+ #navframe {
+    height: 100vh;
+    width: 30vw;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+#navpic {
+    height: 20%;
+    position: relative;
+    padding: 5% 5% 5% 5%;
+}
+
+#navmap {
+    height: 80%;
+    background: rgba(14, 49, 131, 1);
+}
+
+#navmapframe {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5% 5% 5% 5%;
+    margin: 0 auto;
+}
+
+#buttonicon {
+    color: white;
+    font-size: 2.5em;
+    background: rgba(14, 49, 131, 1);
+    border-radius: 50%;
+    padding: 0.3em;
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
+}
+
+#buttonicon:active,
+#buttonicon:hover {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.nav_words:link,
+.nav_words:visited {
+    width: 100%;
+    font-size: 2em;
+    font-family: "Microsoft JhengHei";
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav_words:hover,
+.nav_words:active {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#navlogo {
+    width: 5em;
+    margin: 3% auto;
+}
+
+.none {
+    display: none;
+    transition: 0.3s;
+}
+
+@media screen and (max-width:960px) {
+
+    .nav_words:link,
+    .nav_words:visited {
+        width: 100%;
+        font-size: 0.5em;
+        font-family: "Microsoft JhengHei";
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    #navframe {
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+
+    #navmapframe {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 5% 5% 5% 5%;
+    }
+
+    #fblink {
+        display: block;
+        margin: 0 auto;
+    }
+
+    #buttonicon {
+        color: white;
+        font-size: 2.5em;
+        background: rgba(14, 49, 131, 1);
+        border-radius: 50%;
+        padding: 0.3em;
+        position: absolute;
+        bottom: 10%;
+        left: 80%;
+    }
+}
