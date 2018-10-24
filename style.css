@@ -462,9 +462,13 @@ body::-webkit-scrollbar-thumb {
     max-width: 1140px;   
     margin: 0 auto;
 }
-
+#section_4{
+    height: 50vh;
+    width: 100vw;
+}
 .section_4{ 
-    position: relative; }
+    height: 100vh;
+}
 
 .section_4 a:visited{
     color:#756759;
@@ -477,20 +481,29 @@ body::-webkit-scrollbar-thumb {
 }
 
 .img_41{
-    padding: 20%;
+    height: 80%;
+    
+}
+.img_42{
+    height: 100%;
+    width: 100%;
+    padding: 5vh 5vh;
     position: relative; 
 }
 
-.img_41 img{ /*杯子*/
-    width: 70%;
+#p4cup{ /*杯子*/
+    height:100%;
+    width: auto;
+    position: absolute;
+    left:30%;
 }
 
-.img_42{  /*珍珠*/
-    max-width: 25%;
+#p4bob{  /*珍珠*/
+    max-width: 13%;
     height: auto;
     position: absolute;
-    left:34%;
-    top: 36%;
+    left:40%;
+    top:20%;
 }
 .title_41{/*五十嵐嚴選*/
     color: #756759;
@@ -512,19 +525,34 @@ body::-webkit-scrollbar-thumb {
     box-shadow: 0 0 20px #756759;
     border-radius: 10px;
     left: 68%;
-    top: 64.5%;
     position: absolute;
+    bottom: 5%;
     font-size: 1.000em;
     font-family:"Microsoft JhengHei";
    }
    .btn:hover {
     background-position: right center; 
 }
+@media screen and(max-width:960){
+    #p4cup{ /*杯子*/
+        height:auto;
+        width:50%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    #p4bob{  /*珍珠*/
+        max-width: 13%;
+        height: auto;
+        position: absolute;
+        left:40%;
+        top:20%;
+    }
+}
 
 @media (max-width: 500px) {
     .btn{
     padding: 10px;
-   
     }
 }
 @media (max-width:321px) {
@@ -542,13 +570,15 @@ body::-webkit-scrollbar-thumb {
 
 
 .bg_5{
+    height: 100vh;
     background-image: url("/imgs/材質5.jpg");
-    padding: 7% 0;
+    padding: 3% 0;
     background-size: cover;
+    background-position:30% 80%;
 }
 
 .section_5{
-    padding: 7% 0;
+    padding: 3% 0;
 }
 
 .title_5{
@@ -561,12 +591,25 @@ body::-webkit-scrollbar-thumb {
 }
 
 .img_5{
-    padding: 10% 10% 0 10%;
+    height: 70%;
+    width: 100%;
+    padding:10% 0;
 }
 
 .img_5 img{
-    width: 100%;
-    padding: 30px 0;
+    width: 24%;
+}
+
+@media screen and(max-width:960){
+    .img_5{
+        height: 70%;
+        width: 100%;
+        padding:10% 0;
+        overflow-y: auto;
+    }
+    .img_5 img{
+        width: 100%;
+    }
 }
 /*4+5 css end*/
 
@@ -584,7 +627,9 @@ body::-webkit-scrollbar-thumb {
     background-position: 50% 50%;
     position: relative;
 }
-
+#cleanxbar{
+    overflow-x: hidden;
+}
 
 
 #cup_pic {
@@ -592,11 +637,13 @@ body::-webkit-scrollbar-thumb {
     top: 0;
     left: 0;
 }
-
+#movingbox{
+    height: 50vh;
+    float: right;
+}
 #tea_pic {
-    position: absolute;
-    bottom: 0px;
-    right: 0;
+    float: right;
+    clear: right;
 }
 
 .container {
@@ -696,10 +743,14 @@ body::-webkit-scrollbar-thumb {
     #cup_pic {
         height: 40vw;
     }
-
+    #movingbox{
+        height: 80vh;
+        float: right;
+    }
     #tea_pic {
-        height: 60vw;
-        bottom: -20px;
+        height: 30vw;
+        float: right;
+        clear: right;
     }
 
     #wordframe {

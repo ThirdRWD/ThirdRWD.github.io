@@ -147,14 +147,14 @@
         <div class="section_4">
             <div class="title_41">50嵐嚴選</div>
             <div class="img_41" data-aos="zoom-in" data-aos-duration="2000">
-                <img src="/imgs/嚴選食材.png" alt="嚴選食材">
                 <div class="img_42">
-                    <img src="/imgs/珍珠.gif" alt="珍珠">
+                    <img id="p4cup" src="/imgs/嚴選食材.png" alt="嚴選食材">
+                    <img id="p4bob" src="/imgs/珍珠.gif" alt="珍珠">
+                    <!-- <a href="#section_4" class="title_42">嚴選食材</a> -->
+                    <a href="http://twap.sgs.com/sgssip/VIP_zone.aspx?cstno=VG1uS3VSQitJOXQ4N0VJZGtzZndXUT09#bg" target="_blank"
+                        class="btn btn-1">衛生檢驗</a>
                 </div>
             </div>
-            <!-- <a href="#section_4" class="title_42">嚴選食材</a> -->
-            <a href="http://twap.sgs.com/sgssip/VIP_zone.aspx?cstno=VG1uS3VSQitJOXQ4N0VJZGtzZndXUT09#bg" target="_blank"
-                class="btn btn-1">衛生檢驗</a>
         </div>
     </div>
     </div>
@@ -164,9 +164,12 @@
         <div class="container">
             <div id="section_5" class="section_5">
                 <div class="title_5">Menu</div>
-                <div class="img_5" data-aos="fade-up" data-aos-duration="1500">
-                    <img src="/imgs/Menu2.png" alt="">
-                </div>
+            </div>
+            <div class="img_5" data-aos="fade-up" data-aos-duration="1500">
+                <img src="/imgs/menu-01.png" alt="Menu1">
+                <img src="/imgs/menu-02.png" alt="Menu2">
+                <img src="/imgs/menu-03.png" alt="Menu3">
+                <img src="/imgs/menu-04.png" alt="Menu4">
             </div>
         </div>
 
@@ -174,40 +177,43 @@
     <!--4+5 html end-->
 
     <!--6 html start-->
+
     <div id="page06">
         <div id="p6bg">
-
-            <img id="cup_pic" data-aos="fade-down-right" src="/XC0909-element/cup pic.png" alt="cup">
-            <img id="tea_pic" data-aos="fade-left" src="/XC0909-element/tea pic.png" alt="tea">
-            <div id="see_view" class="container">
-                <!--<img id="spot" src="/XC0909-element/spot.png" alt="spot">-->
-                <div id="title_map">門市據點</div>
-                <div id="mapframe">
-                    <!--map_control-->
-                    <img id="map" src="/XC0909-element/map.png" width="559" height="753" orgWidth="559" orgHeight="753"
-                        usemap="#clickmap" alt="map" data-aos="fade-up">
-                    <map name="clickmap" id="click_map">
-                        <area shape="rect" coords="557,751,559,753" alt="Image Map" style="outline:none;" title="Image Map">
-                        <area id="north" onmouseover="hoverside(this,'北')" onclick="setside('北')" alt="north" title="north"
-                            shape="poly" coords="554,59,436,133,424,175,403,207,362,221,328,218,301,214,273,207,257,201,267,184,274,167,293,152,310,138,313,130,324,101,335,87,343,73,356,61,377,47,407,39,425,36,430,22,433,14,447,8,464,3,485,21,504,35,533,48"
-                            target="_self">
-                        <area id="east" onmouseover="hoverside(this,'東')" onclick="setside('東')" alt="east" title="east"
-                            shape="poly" coords="551,62,435,136,419,196,408,237,392,298,378,355,367,411,360,459,351,521,344,585,346,644,357,671,366,635,375,606,387,587,409,556,425,535,444,511,460,487,465,442,474,390,479,340,491,290,499,256,517,222,534,179,541,147,524,119,530,93,543,77"
-                            style="outline:none;" target="_self">
-                        <area id="mid" onmouseover="hoverside(this,'中')" onclick="setside('中')" alt="mid" title="mid"
-                            shape="poly" coords="415,201,380,219,338,220,287,213,261,205,257,205,243,230,220,279,184,332,172,353,164,374,164,404,159,432,162,448,195,446,250,441,295,433,333,423,362,403,366,394"
-                            style="outline:none;" target="_self" />
-                        <area id="south" onmouseover="hoverside(this,'南')" onclick="setside('南')" alt="south" title="south"
-                            shape="poly" coords="363,413,317,432,250,443,192,446,159,447,155,478,155,504,175,528,193,551,207,581,206,590,202,595,214,606,227,619,237,630,268,642,287,655,312,682,321,699,324,718,321,720,328,740,337,741,343,737,353,749,362,735,368,713,361,690,357,677,348,654,340,612,341,579,345,522"
-                            style="outline:none;" target="_self">
-                    </map>
-                </div>
-                <div id="wordframe" class="nodisplay">
-                    <div id=frametitle>
-                        <h1 id="sidetitle"></h1>
-                        <i id="close" class="fas fa-angle-up"></i>
+            <div id="cleanxbar">
+                <img id="cup_pic" data-aos="fade-down-right" src="/XC0909-element/cup pic.png" alt="cup">
+                <div id="movingbox"></div>
+                <img id="tea_pic" data-aos="fade-left" src="/XC0909-element/tea pic.png" alt="tea">
+                <div id="see_view" class="container">
+                    <!--<img id="spot" src="/XC0909-element/spot.png" alt="spot">-->
+                    <div id="title_map">門市據點</div>
+                    <div id="mapframe">
+                        <!--map_control-->
+                        <img id="map" src="/XC0909-element/map.png" width="559" height="753" orgWidth="559" orgHeight="753"
+                            usemap="#clickmap" alt="map" data-aos="fade-up">
+                        <map name="clickmap" id="click_map">
+                            <area shape="rect" coords="557,751,559,753" alt="Image Map" style="outline:none;" title="Image Map">
+                            <area id="north" onmouseover="hoverside(this,'北')" onclick="setside('北')" alt="north" title="north"
+                                shape="poly" coords="554,59,436,133,424,175,403,207,362,221,328,218,301,214,273,207,257,201,267,184,274,167,293,152,310,138,313,130,324,101,335,87,343,73,356,61,377,47,407,39,425,36,430,22,433,14,447,8,464,3,485,21,504,35,533,48"
+                                target="_self">
+                            <area id="east" onmouseover="hoverside(this,'東')" onclick="setside('東')" alt="east" title="east"
+                                shape="poly" coords="551,62,435,136,419,196,408,237,392,298,378,355,367,411,360,459,351,521,344,585,346,644,357,671,366,635,375,606,387,587,409,556,425,535,444,511,460,487,465,442,474,390,479,340,491,290,499,256,517,222,534,179,541,147,524,119,530,93,543,77"
+                                style="outline:none;" target="_self">
+                            <area id="mid" onmouseover="hoverside(this,'中')" onclick="setside('中')" alt="mid" title="mid"
+                                shape="poly" coords="415,201,380,219,338,220,287,213,261,205,257,205,243,230,220,279,184,332,172,353,164,374,164,404,159,432,162,448,195,446,250,441,295,433,333,423,362,403,366,394"
+                                style="outline:none;" target="_self" />
+                            <area id="south" onmouseover="hoverside(this,'南')" onclick="setside('南')" alt="south" title="south"
+                                shape="poly" coords="363,413,317,432,250,443,192,446,159,447,155,478,155,504,175,528,193,551,207,581,206,590,202,595,214,606,227,619,237,630,268,642,287,655,312,682,321,699,324,718,321,720,328,740,337,741,343,737,353,749,362,735,368,713,361,690,357,677,348,654,340,612,341,579,345,522"
+                                style="outline:none;" target="_self">
+                        </map>
                     </div>
-                    <div id="word"></div>
+                    <div id="wordframe" class="nodisplay">
+                        <div id=frametitle>
+                            <h1 id="sidetitle"></h1>
+                            <i id="close" class="fas fa-angle-up"></i>
+                        </div>
+                        <div id="word"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -282,8 +288,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
     <!--bootstrap js-->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <!--swiper js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
     <!--AOS js-->
