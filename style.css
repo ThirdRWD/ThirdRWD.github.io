@@ -291,7 +291,7 @@ body::-webkit-scrollbar-thumb {
     font-family: "Microsoft JhengHei";
     position: absolute;
     /*父層bg3*/
-    top:5%;
+    top:10%;
     /*最新消息往上推*/
     left: 50%;
     transform: translateX(-50%);
@@ -463,9 +463,8 @@ body::-webkit-scrollbar-thumb {
     margin: 0 auto;
 }
 
-.section_4{
-    position: relative; 
-}
+.section_4{ 
+    position: relative; }
 
 .section_4 a:visited{
     color:#756759;
@@ -483,14 +482,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 .img_41 img{ /*杯子*/
-    width: 90%;
+    width: 70%;
 }
 
 .img_42{  /*珍珠*/
     max-width: 25%;
     height: auto;
     position: absolute;
-    left:37%;
+    left:34%;
     top: 36%;
 }
 .title_41{/*五十嵐嚴選*/
@@ -498,7 +497,7 @@ body::-webkit-scrollbar-thumb {
     font-weight: bolder;
     font-size: 2.250em;
     font-family:"Microsoft JhengHei"; 
-    top: 10%;
+    top: 20%;
     text-align: center;
 }
 
@@ -557,7 +556,7 @@ body::-webkit-scrollbar-thumb {
     font-size: 2.250em;
     letter-spacing: 0.625em;
     font-family:"Microsoft JhengHei";
-    color:white;
+    color: #756759;
     font-weight: bolder;
 }
 
@@ -611,7 +610,7 @@ body::-webkit-scrollbar-thumb {
 #title_map {
     color: white;
     font-size: 3em;
-    font-family: Microsoft JhengHei;
+    font-family: "Microsoft JhengHei";
     text-align: center;
     padding: 3vh;
 }
@@ -729,6 +728,7 @@ body::-webkit-scrollbar-thumb {
     color: #756759;
     font-size: 2.250em;
     display: flex;
+    font-family:"Microsoft JhengHei";
     justify-content: center;
     padding-top: 5%;
     padding-bottom: 5%;
@@ -763,7 +763,7 @@ body::-webkit-scrollbar-thumb {
 .section8_title {
     margin-top: 5%;
     color: #756759;
-    font-weight: bolder;
+    
     margin-bottom: 5%;
     display: flex;
     justify-content: center;

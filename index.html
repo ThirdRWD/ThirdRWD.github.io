@@ -19,8 +19,9 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!--css-->
     <link rel="stylesheet" href="/style.css">
-    
+
 </head>
+
 <body>
     <!--1+2 html start-->
 
@@ -43,7 +44,7 @@
             </div>
         </div>
     </div>
-  
+
     <div id="navframe">
         <div id="navpic">
             <i id="buttonicon" class="fas fa-bars"></i>
@@ -64,7 +65,7 @@
             </div>
         </div>
     </div>
-  
+
     <!--1+2 html end-->
 
     <!--3 html start-->
@@ -152,7 +153,7 @@
                 </div>
             </div>
             <!-- <a href="#section_4" class="title_42">嚴選食材</a> -->
-            <a href="http://twap.sgs.com/sgssip/VIP_zone.aspx?cstno=VG1uS3VSQitJOXQ4N0VJZGtzZndXUT09#bg" target="_blank" 
+            <a href="http://twap.sgs.com/sgssip/VIP_zone.aspx?cstno=VG1uS3VSQitJOXQ4N0VJZGtzZndXUT09#bg" target="_blank"
                 class="btn btn-1">衛生檢驗</a>
         </div>
     </div>
@@ -304,13 +305,13 @@
         clickicon.onclick = function moblieclick() {
             //toggle #navframe active
             document.querySelector("#navframe").classList.toggle("active");
-            
+
             if (iconstatus == 0) {
                 document.querySelector("#navmap").classList.toggle("none");
                 document.querySelector("#navpic").style.backgroundColor = 'rgba(14,49,131,1)';
                 if (window.innerWidth <= 960) {
-                    clickicon.style.left='50%';
-                    clickicon.style.transform='translate(-50%,-50%)';/*
+                    clickicon.style.left = '50%';
+                    clickicon.style.transform = 'translate(-50%,-50%)';/*
                     clickicon.classList.toggle("navmargin");*/
                 }
                 iconstatus = 1;
@@ -319,8 +320,8 @@
                 document.querySelector("#navmap").classList.toggle("none");
                 document.querySelector("#navpic").style.backgroundColor = 'rgba(14,49,131,0)';
                 if (window.innerWidth <= 960) {
-                    clickicon.style.left='80%';
-                    clickicon.style.transform='translate(0,0)';/*
+                    clickicon.style.left = '80%';
+                    clickicon.style.transform = 'translate(0,0)';/*
                     clickicon.classList.toggle("navmargin");*/
                 }
                 iconstatus = 0;
@@ -443,6 +444,7 @@
     <!--7+8 js start-->
     <script>
         var swiper = new Swiper('.swiper-container7', {
+            effect: 'cube',//**方塊**//
             navigation: {
                 nextEl: '.swiper-button-next7',
                 prevEl: '.swiper-button-prev7',
