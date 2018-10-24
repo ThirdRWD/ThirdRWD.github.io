@@ -171,12 +171,14 @@ body {
     .black_tea {
         padding-top: 5%;
         padding-bottom: 5%;
+        overflow-x: hidden;
     }
 
     .milk_tea {
         padding-top: 5%;
         padding-bottom: 5%;
         text-align: right;
+        overflow-x: hidden;
     }
     #logo{
         width: 30%;
@@ -471,6 +473,7 @@ body {
 
 #page06 {
     max-width: 100vw;
+    overflow-x: hidden;
 }
 
 #p6bg {
