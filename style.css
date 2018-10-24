@@ -574,7 +574,6 @@ body::-webkit-scrollbar-thumb {
 
 #page06 {
     max-width: 100vw;
-    overflow: hidden;
 }
 
 #p6bg {
@@ -584,7 +583,6 @@ body::-webkit-scrollbar-thumb {
     background-size: cover;
     background-position: 50% 50%;
     position: relative;
-    overflow-y: hidden;
 }
 
 
@@ -597,7 +595,7 @@ body::-webkit-scrollbar-thumb {
 
 #tea_pic {
     position: absolute;
-    bottom: -100px;
+    bottom: 0px;
     right: 0;
 }
 
