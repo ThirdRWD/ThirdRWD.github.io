@@ -64,7 +64,6 @@ body {
 
 .box_absolute {
     position: absolute;
- 
     top: 5px;
     left: 50%;
 }
@@ -72,8 +71,6 @@ body {
 
 #navbar_relative {
     position: relative;
-  
-   
 }
 
 
@@ -85,7 +82,8 @@ body {
 }
 
 .box_absolute img {
-    width: 60%;
+    width: 55%;
+    margin: 0 0 0 -25%;
 }
 
 
@@ -380,8 +378,6 @@ body {
     margin: 0 auto;
 }
 
-
-
 .section_4{
     position: relative; 
 }
@@ -397,7 +393,7 @@ body {
 }
 
 .img_41{
-    padding: 20% 20%;
+    padding: 20%;
     position: relative; 
 }
 
@@ -420,12 +416,13 @@ body {
     letter-spacing: 0.625em;
     padding: 0 20%;
     font-family:"Microsoft JhengHei"; 
+    margin: 15% 0% -5% 0%;
 }
 
 .title_42{
     position: absolute;
     left: 75%;
-    top: 65%;
+    top: 60%;
     font-size: 1.000em;
     color: #756759;
     font-family:"Microsoft JhengHei";
@@ -434,7 +431,7 @@ body {
 .title_43{
     position: absolute;
     left: 75%;
-    top: 72.5%;
+    top: 64.5%;
     font-size: 1.000em;
     color: #756759;
     font-family:"Microsoft JhengHei";
@@ -465,6 +462,7 @@ body {
 
 .img_5 img{
     width: 100%;
+    padding: 30px 0;
 }
 /*4+5 css end*/
 
