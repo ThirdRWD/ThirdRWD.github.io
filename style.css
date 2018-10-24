@@ -490,21 +490,26 @@ body::-webkit-scrollbar-thumb {
     padding: 5vh 5vh;
     position: relative; 
 }
-
-#p4cup{ /*杯子*/
+#cuppic{
     height:100%;
-    width: auto;
+    width: 40%;
+    padding: 0 5%;
+    margin: 0 auto;
+    position: relative; 
+}
+#p4cup{
+    width: 100%;
     position: absolute;
-    left:30%;
+    left:0;
+}
+#p4bob{
+    width: 50%;
+    position: absolute;
+    top:10%;
+    left:25%;
 }
 
-#p4bob{  /*珍珠*/
-    max-width: 13%;
-    height: auto;
-    position: absolute;
-    left:40%;
-    top:20%;
-}
+
 .title_41{/*五十嵐嚴選*/
     color: #756759;
     font-weight: bolder;
@@ -533,20 +538,24 @@ body::-webkit-scrollbar-thumb {
    .btn:hover {
     background-position: right center; 
 }
-@media screen and(max-width:960){
-    #p4cup{ /*杯子*/
-        height:auto;
-        width:50%;
-        position: absolute;
-        left: 0;
-        top: 0;
+@media (max-width:960px){
+    #cuppic{
+        height:100%;
+        width: 100%;
+        padding: 0 5%;
+        margin: 0 auto;
+        position: relative; 
     }
-    #p4bob{  /*珍珠*/
-        max-width: 13%;
-        height: auto;
+    #p4cup{
+        width: 100%;
         position: absolute;
-        left:40%;
-        top:20%;
+        left:0;
+    }
+    #p4bob{
+        width: 50%;
+        position: absolute;
+        top:11%;
+        left:25%;
     }
 }
 
@@ -597,10 +606,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 .img_5 img{
-    width: 24%;
+    width: 23%;
 }
 
-@media screen and(max-width:960){
+@media (max-width:960px){
     .img_5{
         height: 70%;
         width: 100%;
@@ -608,7 +617,7 @@ body::-webkit-scrollbar-thumb {
         overflow-y: auto;
     }
     .img_5 img{
-        width: 100%;
+        width: 100%!important;
     }
 }
 /*4+5 css end*/
@@ -772,6 +781,7 @@ body::-webkit-scrollbar-thumb {
 .section7 {
     max-width: 1140px;
     margin: 0 auto;
+    height:100vh;
 }
 
 .section7_title {
@@ -781,7 +791,7 @@ body::-webkit-scrollbar-thumb {
     font-family:"Microsoft JhengHei";
     justify-content: center;
     padding-top: 5%;
-    padding-bottom: 5%;
+    padding-bottom: 17%;
 }
 /*78-swiper*/
 .swiper-container.swiper-container7 {
