@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
     /*計算寬度時 包含padding*/
 }
 
@@ -12,196 +13,285 @@ body {
     clear: both;
 }
 
+body::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+
 /*1+2 css start*/
-/*浮動式自訂連結區塊 - CSS*/
-.myBtn {
+#p1bg {
+    height: 100vh;
+    background-image: url("/2018-10-23/page01/page01_banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+#logo {
+    width: 5vw;
+    margin: 0 auto;
+    padding: 2vh 0 0 0;
+}
+
+#logo img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+/*web to ipad*/
+@media screen and (max-width:1020px) {
+    #logo {
+        width: 20vw;
+        margin: 0 auto;
+        padding: 2vh 0 0 0;
+    }
+}
+/*cellphone*/
+@media screen and (max-width:960px) {
+    #logo {
+        width: 15vw;
+        margin: 0 auto;
+        padding: 2vh 0 0 0;
+    }
+}
+
+ /*nav*/
+ #navframe {
+    /* height: 100vh;
+    width: 30vw; */
     position: fixed;
-    
-    /*固定在網頁上不隨卷軸移動，若要隨卷軸移動用absolute*/
-    top: 5.5%;
-    /*設置垂直位置*/
+    /* top: 0;
+    right: 0; */
+    z-index: 9999;
+    height: 60px;
+    width: 60px;
+    top: 16.5%;
+    right: 20.5%;
+}
+
+#navframe.active {
+    height: 100vh;
+    width: 30vw;
+    top: 0;
     right: 0;
 }
 
-
-.myBtn img {
-   width: 40%;
-   
-}
-
-.myBtn.close {
-    display: none;
-}
-
-.myBtn_close {
-    position: fixed;
-    top: 0px;
-    right: 550px;
-    display: none;
-}
-
-.myBtn_close_absolute img {
-    width: 3.125em ;
-}
-
-.myBtn_close.show {
-    display: block;
-}
-
-/* .home_page {
-    background-image: url('/image/bg.png');
-    width: 100%;
-} */
-
-.box_relative {
+#navpic {
+    height: 20%;
     position: relative;
-    width: 100%;
+    padding: 5% 5% 5% 5%;
 }
 
-.box_relative img {
-    width: 100%;
+#navmap {
+    height: 80%;
+    background: rgba(14, 49, 131, 1);
 }
 
-.box_absolute {
+#navmapframe {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5% 5% 5% 5%;
+    margin: 0 auto;
+}
+
+#buttonicon {
+    color: white;
+    font-size: 2.5em;
+    background: rgba(14, 49, 131, 1);
+    border-radius: 50%;
+    padding: 0.3em;
     position: absolute;
-    top: 5px;
-    left: 50%;
+    bottom: 10%;
+    left: 20%;
 }
 
+#buttonicon:active,
+#buttonicon:hover {
+    color: rgba(255, 255, 255, 0.6);
+}
 
-#navbar_relative {
+.nav_words:link,
+.nav_words:visited {
+    width: 100%;
+    font-size: 2em;
+    font-family: "Microsoft JhengHei";
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav_words:hover,
+.nav_words:active {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#navlogo {
+    width: 5em;
+    margin: 3% auto;
+}
+
+.none {
+    display: none;
+    transition: 0.3s;
+}
+
+@media screen and (max-width:960px) {
+
+    .nav_words:link,
+    .nav_words:visited {
+        width: 100%;
+        font-size: 0.5em;
+        font-family: "Microsoft JhengHei";
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        text-align: center;
+    }#navframe {
+        /* height: 100vh;
+        width: 30vw; */
+        position: fixed;
+        /* top: 0;
+        right: 0; */
+        z-index: 9999;
+        height: 60px;
+        width: 60px;
+        top: 16.5%;
+        right: 20.5%;
+    }
+    
+    #navframe.active {
+        height: 100vh;
+        width: 30vw;
+        top: 0;
+        right: 0;
+    }
+
+    #navmapframe {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 5% 5% 5% 5%;
+    }
+
+    #fblink {
+        display: block;
+        margin: 0 auto;
+    }
+
+    #buttonicon {
+        color: white;
+        font-size: 2.5em;
+        background: rgba(14, 49, 131, 1);
+        border-radius: 50%;
+        padding: 0.3em;
+        position: absolute;
+        bottom: 10%;
+        left: 80%;
+    }
+}
+#p2bg {
+    height: 100vh;
+    background-image: url("/2018-10-23/page02/page02_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 10vh 0;
+}
+
+#bannerframe {
+    height: 100%;
+    width: 100%;
+    /*background: rosybrown;*/
     position: relative;
+    overflow-x: hidden;
 }
 
-
-
-.myBtn_close_absolute {
+#yanmai {
+    height: 40%;
+    width: 80%;
     position: absolute;
     top: 0;
     left: 0;
+    /*background: red;*/
 }
 
-.box_absolute img {
-    width: 55%;
-    margin: 0 0 0 -25%;
+#wulong {
+    height: 40%;
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /*background: blue;*/
 }
 
-
-.navbar {
-    background-color: #0d3082;
-    width: 600px;
-    height: 1000px;
-    position: fixed;
-    top: 0px;
-    right: -600px;
-    z-index: 10;
+#yanmaipic {
+    height: 100%;
+    width: 100%;
+    background-image: url("/2018-10-23/page02/yanmaiweb.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
 }
 
-.navbar.active {
-    right: 0px;
+#wulongpic {
+    height: 100%;
+    width: 100%;
+    background-image: url("/2018-10-23/page02/wulongweb.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
 }
 
-.nav_word {
-    font-size: 2em;
-    font-family: "Microsoft JhengHei";
-    margin: 30px 30px 60px 20px;
-   
-    /*text-align: center;*/
-    color: white;
-    font-weight: bold;
-}
-
-.nav_items-1 {
-    margin: 60% 50% 30% 30%;
-}
-
-.fb {
-    padding: 5% 90% 60% 20%;
-}
-
-
-.doc_page {
-    background-image: url('/image/bg.png');
-}
-
-.black_tea {
-    padding-top: 62px;
-    padding-bottom: 62px;
-}
-
-.black_tea img {
-    width: 65%;
-}
-
-.milk_tea {
-    padding-top: 62px;
-    padding-bottom: 62px;
-    text-align: right;
-}
-
-.milk_tea img {
-    width: 65%;
-}
-
-.join_us {
-    letter-spacing: 5%;
-}
-
-/*手機版CSS 螢幕尺寸小於768px時，套用以下CSS*/
-@media screen and (max-width:768px) {
-    .nav_word {
-        font-size: 100%;
-    }
-    .navbar {
-        max-width: 50%;
-        z-index: 10;
-    }
-    .nav_items-1{
-        margin: 5% 10% 60% 10%;
-    }
-    .myBtn img{
-        position: fixed;
-        /*固定在網頁上不隨卷軸移動，若要隨卷軸移動用absolute*/
-        top: 1%;
-        /*設置垂直位置*/
-        right: 1%;
-        width: 10%;
+@media screen and (max-width:960px) {
+    #yanmaipic {
+        height: 100%;
+        width: 100%;
+        background-image: url("/2018-10-23/page02/yanmaimobile.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left;
     }
 
-    .black_tea {
-        padding-top: 5%;
-        padding-bottom: 5%;
-        overflow-x: hidden;
+    #wulongpic {
+        height: 100%;
+        width: 100%;
+        background-image: url("/2018-10-23/page02/wulongmobile.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
     }
 
-    .milk_tea {
-        padding-top: 5%;
-        padding-bottom: 5%;
-        text-align: right;
-        overflow-x: hidden;
-    }
-    #logo{
-        width: 30%;
-
-    }
-    .myBtn_close_absolute img{
-        width: 10%;
-        position: fixed;
-        top: 5px;
-     
-    }
 }
+
 /*1+2 css end*/
 
 /*3 css start*/
 .title_3 {
     /*最新消息*/
+    color: #756759;
     font-size: 2.250em;
     font-weight: bolder;
     font-family: "Microsoft JhengHei";
     position: absolute;
     /*父層bg3*/
-    top: 10%;
+    top:5%;
     /*最新消息往上推*/
     left: 50%;
     transform: translateX(-50%);
@@ -209,7 +299,7 @@ body {
 
 @media (max-width: 655px) {
     .title_3 {
-        top: 4%;
+        top: 1%;
     }
 }
 
@@ -218,13 +308,6 @@ body {
     margin: 0 auto;
 }
 
-body {
-    background: #eee;
-    font-family: "Microsoft JhengHei";
-    color: #000;
-    margin: 0;
-    padding: 0;
-}
 .bg_34{ /*3+4的背景 可推Y軸移草的位置*/
     background-image:url(/材質照片/bg34_1.jpg);
     background-repeat: no-repeat;
@@ -305,7 +388,7 @@ body {
 }
 
 .swiper-pagination-bullet {
-    margin-left: 15px;
+    margin-left: 12px;
 }
 
 .swiper-button-prev.swiper-button-prev3 {
@@ -399,46 +482,65 @@ body {
     position: relative; 
 }
 
-.img_41 img{
-    width: 50%;
+.img_41 img{ /*杯子*/
+    width: 90%;
 }
 
-.img_42{
-    max-width: 20%;
+.img_42{  /*珍珠*/
+    max-width: 25%;
     height: auto;
     position: absolute;
-    left: 31%;
-    top: 42%;
+    left:37%;
+    top: 36%;
 }
-
-.title_41{
+.title_41{/*五十嵐嚴選*/
     color: #756759;
     font-weight: bolder;
     font-size: 2.250em;
-    letter-spacing: 0.625em;
     font-family:"Microsoft JhengHei"; 
-    position: absolute;
     top: 10%;
-    left: 20%;
+    text-align: center;
 }
 
-.title_42{
-    position: absolute;
-    left: 75%;
-    top: 60%;
-    font-size: 1.000em;
-    color: #756759;
-    font-family:"Microsoft JhengHei";
-}
-
-.title_43{
-    position: absolute;
-    left: 75%;
+.btn {
+    flex: 1 1 auto;
+    margin: 10px;
+    padding: 25px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #756759;
+    border-radius: 10px;
+    left: 68%;
     top: 64.5%;
+    position: absolute;
     font-size: 1.000em;
-    color: #756759;
     font-family:"Microsoft JhengHei";
+   }
+   .btn:hover {
+    background-position: right center; 
 }
+
+@media (max-width: 500px) {
+    .btn{
+    padding: 10px;
+   
+    }
+}
+@media (max-width:321px) {
+    .btn{
+    padding: 10px;
+    margin: 10px;
+    left: 63%;
+    }
+}
+
+.btn-1 {  /*按鈕顏色*/
+    background-image: linear-gradient(to right, #deb887 0%, #e7d9c1 51%, #f3bf98 100%);
+  }
+
+
 
 .bg_5{
     background-image: url("/imgs/材質5.jpg");
@@ -660,6 +762,8 @@ body {
 
 .section8_title {
     margin-top: 5%;
+    color: #756759;
+    font-weight: bolder;
     margin-bottom: 5%;
     display: flex;
     justify-content: center;
