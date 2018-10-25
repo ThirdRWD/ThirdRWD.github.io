@@ -540,6 +540,7 @@ body::-webkit-scrollbar-thumb {
     color: #756759;
     font-weight: bolder;
     font-size: 2.250em;
+    padding:1.5em 0;
     font-family:"Microsoft JhengHei"; 
     top: 20%;
     text-align: center;
@@ -582,6 +583,10 @@ body::-webkit-scrollbar-thumb {
         position: absolute;
         top:11%;
         left:25%;
+    }
+    #section_4{
+        height: 0vh;
+        width: 100vw;
     }
 }
 

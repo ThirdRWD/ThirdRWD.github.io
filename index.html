@@ -53,8 +53,8 @@
             <div id="navmapframe">
                 <a class="nav_words" href="#page01">首頁</a><br>
                 <a class="nav_words" href="#page02">當季推廣</a><br>
-                <a class="nav_words" href="#page03">最新消息</a><br>
-                <a class="nav_words" href="#section_4">50嵐嚴選</a><br>
+                <a class="nav_words" href="#bg_3">最新消息</a><br>
+                <a class="nav_words" href="#pg4title">50嵐嚴選</a><br>
                 <a class="nav_words" href="#section_5">Menu</a><br>
                 <a class="nav_words" href="#page06">門市據點</a><br>
                 <a class="nav_words" href="#section7">關於50嵐</a><br>
@@ -72,7 +72,7 @@
     <div id="page03" class="bg_34">
         <div id="showpic" class="bigpic">
             <i class="fas fa-angle-up closepic"></i>
-            <img class="photograph_3" src="/產品_推廣/燕麥紅茶奶02.jpg" alt="showframe">
+            <img id="showpicselector" class="photograph_3" src="/產品_推廣/燕麥紅茶奶02.jpg" alt="showframe">
         </div>
         <div id="bg_3" class="bg_3">
             <div class="container_3">
@@ -81,21 +81,21 @@
                     <div id="swiper1" class="swiper-container swiper-container3">
                         <div class="swiper-wrapper swiper-wrapper3">
                             <div class="swiper-slide swiper-slide3">
-                                <div id="ac01" class="product_3">
+                                <div id="ac01" onclick="showpic('ac01')" class="product_3">
                                     <img class="photograph_3" src="/產品_推廣/燕麥紅茶奶02.jpg" alt="">
                                     <div class="date_3">2018<br>10/15</div>
                                     <div class="product__description_3">燕麥系列新上市</div>
                                 </div>
                             </div>
                             <div class="swiper-slide swiper-slide3">
-                                <div id="ac02" class="product_3">
+                                <div id="ac02" onclick="showpic('ac02')" class="product_3">
                                     <img class="photograph_3" src="/活動節慶/環保/花博袋著走.jpg" alt="">
                                     <div class="date_3">2018<br>10/15</div>
                                     <div class="product__description_3">限量版花博杯袋 <br></div>
                                 </div>
                             </div>
                             <div class="swiper-slide swiper-slide3">
-                                <div id="ac03" class="product_3">
+                                <div id="ac03" onclick="showpic('ac03')" class="product_3">
                                     <img class="photograph_3" src="/產品_推廣/旺來紅01.gif" alt="">
                                     <div class="date_3">2018<br>10/15</div>
                                     <div class="product__description_3">新品上市旺來紅</div>
@@ -103,28 +103,28 @@
                             </div>
 
                             <div class="swiper-slide swiper-slide3">
-                                <div id="ac04" class="product_3">
+                                <div id="ac04" onclick="showpic('ac04')" class="product_3">
                                     <img class="photograph_3" src="/產品_推廣/瑪琪朵系列01.jpg" alt="">
                                     <div class="date_3">2018<br>10/15</div>
                                     <div class="product__description_3">瑪琪朵系列</div>
                                 </div>
                             </div>
                             <div class="swiper-slide swiper-slide3">
-                                <div id="ac05" class="product_3">
+                                <div id="ac05" onclick="showpic('ac05')" class="product_3">
                                     <img class="photograph_3" src="/產品_推廣/葡萄柚系列.jpg" alt="">
                                     <div class="date_3">2018<br>10/15</div>
                                     <div class="product__description_3">季節限定新鮮上市</div>
                                 </div>
                             </div>
                             <div class="swiper-slide swiper-slide3">
-                                <div id="ac06" class="product_3">
+                                <div id="ac06" onclick="showpic('ac06')" class="product_3">
                                     <img class="photograph_3" src="/產品_推廣/芒果青.jpg" alt="">
                                     <div class="date_3">2018<br>10/15</div>
                                     <div class="product__description_3">芒果青新鮮上市</div>
                                 </div>
                             </div>
                             <div class="swiper-slide swiper-slide3">
-                                <div id="ac07" class="product_3">
+                                <div id="ac07" onclick="showpic('ac07')" class="product_3">
                                     <img class="photograph_3" src="/產品_推廣/蜂蜜系列.jpg" alt="">
                                     <div class="date_3">2018<br>10/15</div>
                                     <div class="product__description_3">蜂蜜系列甜蜜上市</div>
@@ -147,7 +147,7 @@
 
         <!--4+5 html start-->
         <div id="section_4"></div>
-        <div class="section_4">
+        <div id="pg4title" class="section_4">
             <div class="title_41">50嵐嚴選</div>
             <div class="img_41" data-aos="zoom-in" data-aos-duration="2000">
                 <div class="img_42">
@@ -372,6 +372,43 @@
                 }
             }
         });
+
+        function showpic(picnum) {
+            switch (picnum) {
+                case 'ac01':
+                    document.querySelector(".bigpic").style.display = "block";
+                    document.querySelector("#showpicselector").setAttribute('src', "/產品_推廣/燕麥紅茶奶02.jpg");
+                    break;
+                case 'ac02':
+                    document.querySelector(".bigpic").style.display = "block";
+                    document.querySelector("#showpicselector").setAttribute('src', "/活動節慶/環保/花博袋著走.jpg");
+                    break;
+                case 'ac03':
+                    document.querySelector(".bigpic").style.display = "block";
+                    document.querySelector("#showpicselector").setAttribute('src', "/產品_推廣/旺來紅01.gif");
+                    break;
+                case 'ac04':
+                    document.querySelector(".bigpic").style.display = "block";
+                    document.querySelector("#showpicselector").setAttribute('src', "/產品_推廣/瑪琪朵系列01.jpg");
+                    break;
+                case 'ac05':
+                    document.querySelector(".bigpic").style.display = "block";
+                    document.querySelector("#showpicselector").setAttribute('src', "/產品_推廣/葡萄柚系列.jpg");
+                    break;
+                case 'ac06':
+                    document.querySelector(".bigpic").style.display = "block";
+                    document.querySelector("#showpicselector").setAttribute('src', "/產品_推廣/芒果青.jpg");
+                    break;
+                case 'ac07':
+                    document.querySelector(".bigpic").style.display = "block";
+                    document.querySelector("#showpicselector").setAttribute('src', "/產品_推廣/蜂蜜系列.jpg");
+                    break;
+                default: break;
+            }
+        }
+        document.querySelector(".bigpic").onclick=function closingpic(){
+            document.querySelector(".bigpic").style.display = "none";
+        }
     </script>
 
     <!--3 js end-->
