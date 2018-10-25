@@ -70,6 +70,10 @@
 
     <!--3 html start-->
     <div id="page03" class="bg_34">
+        <div id="showpic" class="bigpic">
+            <i class="fas fa-angle-up closepic"></i>
+            <img class="photograph_3" src="/產品_推廣/燕麥紅茶奶02.jpg" alt="showframe">
+        </div>
         <div id="bg_3" class="bg_3">
             <div class="container_3">
                 <div class="title_3">最新消息</div>
@@ -77,21 +81,21 @@
                     <div id="swiper1" class="swiper-container swiper-container3">
                         <div class="swiper-wrapper swiper-wrapper3">
                             <div class="swiper-slide swiper-slide3">
-                                <div class="product_3">
+                                <div id="ac01" class="product_3">
                                     <img class="photograph_3" src="/產品_推廣/燕麥紅茶奶02.jpg" alt="">
                                     <div class="date_3">2018<br>10/15</div>
                                     <div class="product__description_3">燕麥系列新上市</div>
                                 </div>
                             </div>
                             <div class="swiper-slide swiper-slide3">
-                                <div class="product_3">
+                                <div id="ac02" class="product_3">
                                     <img class="photograph_3" src="/活動節慶/環保/花博袋著走.jpg" alt="">
                                     <div class="date_3">2018<br>10/15</div>
                                     <div class="product__description_3">限量版花博杯袋 <br></div>
                                 </div>
                             </div>
                             <div class="swiper-slide swiper-slide3">
-                                <div class="product_3">
+                                <div id="ac03" class="product_3">
                                     <img class="photograph_3" src="/產品_推廣/旺來紅01.gif" alt="">
                                     <div class="date_3">2018<br>10/15</div>
                                     <div class="product__description_3">新品上市旺來紅</div>
@@ -99,29 +103,28 @@
                             </div>
 
                             <div class="swiper-slide swiper-slide3">
-                                <div class="product_3">
+                                <div id="ac04" class="product_3">
                                     <img class="photograph_3" src="/產品_推廣/瑪琪朵系列01.jpg" alt="">
                                     <div class="date_3">2018<br>10/15</div>
                                     <div class="product__description_3">瑪琪朵系列</div>
                                 </div>
                             </div>
                             <div class="swiper-slide swiper-slide3">
-                                <div class="product_3">
+                                <div id="ac05" class="product_3">
                                     <img class="photograph_3" src="/產品_推廣/葡萄柚系列.jpg" alt="">
                                     <div class="date_3">2018<br>10/15</div>
                                     <div class="product__description_3">季節限定新鮮上市</div>
                                 </div>
                             </div>
                             <div class="swiper-slide swiper-slide3">
-                                <div class="product_3">
+                                <div id="ac06" class="product_3">
                                     <img class="photograph_3" src="/產品_推廣/芒果青.jpg" alt="">
-
                                     <div class="date_3">2018<br>10/15</div>
                                     <div class="product__description_3">芒果青新鮮上市</div>
                                 </div>
                             </div>
                             <div class="swiper-slide swiper-slide3">
-                                <div class="product_3">
+                                <div id="ac07" class="product_3">
                                     <img class="photograph_3" src="/產品_推廣/蜂蜜系列.jpg" alt="">
                                     <div class="date_3">2018<br>10/15</div>
                                     <div class="product__description_3">蜂蜜系列甜蜜上市</div>
@@ -315,22 +318,20 @@
 
             if (iconstatus == 0) {
                 document.querySelector("#navmap").classList.toggle("none");
-                document.querySelector("#navpic").style.backgroundColor = 'rgba(14,49,131,1)';
+                document.querySelector("#navpic").style.backgroundColor = 'rgba(14,49,131,1)';/*
                 if (window.innerWidth <= 960) {
                     clickicon.style.left = '50%';
-                    clickicon.style.transform = 'translate(-50%,-50%)';/*
-                    clickicon.classList.toggle("navmargin");*/
-                }
+                    clickicon.style.transform = 'translate(-50%,-50%)';
+                }*/
                 iconstatus = 1;
             }
             else {
                 document.querySelector("#navmap").classList.toggle("none");
-                document.querySelector("#navpic").style.backgroundColor = 'rgba(14,49,131,0)';
+                document.querySelector("#navpic").style.backgroundColor = 'rgba(14,49,131,0)';/*
                 if (window.innerWidth <= 960) {
                     clickicon.style.left = '80%';
-                    clickicon.style.transform = 'translate(0,0)';/*
-                    clickicon.classList.toggle("navmargin");*/
-                }
+                    clickicon.style.transform = 'translate(0,0)';
+                }*/
                 iconstatus = 0;
             }
         }
