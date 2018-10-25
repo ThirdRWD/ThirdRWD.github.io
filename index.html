@@ -55,7 +55,7 @@
                 <a class="nav_words" href="#page02">當季推廣</a><br>
                 <a class="nav_words" href="#bg_3">最新消息</a><br>
                 <a class="nav_words" href="#pg4title">50嵐嚴選</a><br>
-                <a class="nav_words" href="#section_5">Menu</a><br>
+                <a class="nav_words" href="#bg_5">Menu</a><br>
                 <a class="nav_words" href="#page06">門市據點</a><br>
                 <a class="nav_words" href="#section7">關於50嵐</a><br>
                 <a class="nav_words" href="#section8">JOINUS</a><br>
@@ -230,18 +230,20 @@
         <!--關於50嵐-->
         <div id="section7" class="section7">
             <div class="section7_title">關於50嵐</div>
-            <div class="swiper-container swiper-container7">
-                <div class="swiper-wrapper swiper-wrapper7">
-                    <div class="swiper-slide swiper-slide3">
-                        <img class="d-block w-100" src="/78imgs/資產8.jpg" alt="First slide">
+            <div id="swiper7frame">
+                <div class="swiper-container swiper-container7">
+                    <div class="swiper-wrapper swiper-wrapper7">
+                        <div class="swiper-slide swiper-slide3">
+                            <img class="d-block w-100" src="/78imgs/資產8.jpg" alt="First slide">
+                        </div>
+                        <div class="swiper-slide swiper-slide3">
+                            <img class="d-block w-100" src="/78imgs/資產9.jpg" alt="Second slide">
+                        </div>
                     </div>
-                    <div class="swiper-slide swiper-slide3">
-                        <img class="d-block w-100" src="/78imgs/資產9.jpg" alt="Second slide">
-                    </div>
+                    <!--Add Arrows-->
+                    <div class="swiper-button-next swiper-button-next7"><i class="fas fa-angle-right fa-3x "></i></div>
+                    <div class="swiper-button-prev swiper-button-prev7"><i class="fas fa-angle-right fa-3x fa-rotate-180"></i></div>
                 </div>
-                <!--Add Arrows-->
-                <div class="swiper-button-next swiper-button-next7"><i class="fas fa-angle-right fa-3x "></i></div>
-                <div class="swiper-button-prev swiper-button-prev7"><i class="fas fa-angle-right fa-3x fa-rotate-180"></i></div>
             </div>
         </div>
         <!--加入我們-->
@@ -406,7 +408,7 @@
                 default: break;
             }
         }
-        document.querySelector(".bigpic").onclick=function closingpic(){
+        document.querySelector(".bigpic").onclick = function closingpic() {
             document.querySelector(".bigpic").style.display = "none";
         }
     </script>
