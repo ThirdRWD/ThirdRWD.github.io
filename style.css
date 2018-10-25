@@ -604,11 +604,12 @@ body::-webkit-scrollbar-thumb {
     left: 39%;
     }
 }
-@media (max-width:321px) {
+@media (max-width:361px) {
     .btn{
-    padding: 10px;
-    margin: 10px;
-    left: 38%;
+        bottom: 12%;
+        padding: 10px;
+        margin: 10px;
+        left: 36.5%;
     }
 }
 
