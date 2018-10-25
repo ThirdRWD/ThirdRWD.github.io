@@ -531,8 +531,8 @@ body::-webkit-scrollbar-thumb {
 #p4bob{
     width: 50%;
     position: absolute;
-    top:10%;
-    left:25%;
+    top:20%;
+    left:29%;
 }
 
 
@@ -581,8 +581,8 @@ body::-webkit-scrollbar-thumb {
     #p4bob{
         width: 50%;
         position: absolute;
-        top:11%;
-        left:25%;
+        top:10%;
+        left:29%;
     }
     #section_4{
         height: 0vh;
@@ -593,13 +593,14 @@ body::-webkit-scrollbar-thumb {
 @media (max-width: 500px) {
     .btn{
     padding: 10px;
+    left: 39%;
     }
 }
 @media (max-width:321px) {
     .btn{
     padding: 10px;
     margin: 10px;
-    left: 63%;
+    left: 38%;
     }
 }
 
