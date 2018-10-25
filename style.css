@@ -480,6 +480,14 @@ body::-webkit-scrollbar-thumb {
         /*清除浮動*/
     }
 }
+@media(max-width:960px){
+    .bigpic img{
+        height: auto;
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+    }
+}
 
 /*3 css end*/
 
